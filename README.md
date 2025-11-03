@@ -13,6 +13,7 @@ Modern, responsive website for VSol Software Consulting built with Node.js, Type
 - Health check endpoints
 - Structured logging with Pino
 - Security headers with Helmet
+- Render MCP server integration for AI-powered infrastructure management
 
 ## Architecture
 
@@ -164,6 +165,57 @@ npm run db:studio
 | HOST | Server host | 0.0.0.0 |
 | DATABASE_URL | SQLite database path | ./data/vsol.db |
 | LOG_LEVEL | Logging level (trace/debug/info/warn/error/fatal) | info |
+| RENDER_API_KEY | Render API key for MCP server (optional) | - |
+
+## Render MCP Server
+
+This project is configured with the official Render MCP server, which enables AI-powered management of your Render infrastructure directly from Cursor or other MCP-compatible editors.
+
+### Setup
+
+1. **Generate a Render API Key:**
+   - Log in to your Render account
+   - Navigate to Account Settings
+   - Create a new API key
+
+2. **Configure the API Key:**
+   
+   Copy the example configuration file:
+   ```bash
+   cp mcp.json.example mcp.json
+   ```
+   
+   Then update `mcp.json` with your Render API key:
+   ```json
+   {
+     "mcpServers": {
+       "render": {
+         "command": "npx",
+         "args": ["-y", "@render/mcp-server-render"],
+         "env": {
+           "RENDER_API_KEY": "your_api_key_here"
+         }
+       }
+     }
+   }
+   ```
+
+3. **Restart Cursor:**
+   After updating the configuration, restart Cursor to activate the MCP server.
+
+### Capabilities
+
+With the Render MCP server connected, you can:
+
+- Create and deploy web services, static sites, and databases using natural language
+- Analyze service metrics (CPU, memory, HTTP traffic)
+- Fetch and filter service logs
+- Query databases directly
+- Update service environment variables
+
+### Security
+
+The Render MCP server restricts destructive operations like deleting services or databases. It allows creating services and updating environment variables while maintaining security.
 
 ## Deployment
 

@@ -11,6 +11,9 @@ client/dist/
 .env.local
 .env.*.local
 
+# MCP configuration (contains API keys)
+mcp.json
+
 # Database
 *.db
 *.db-journal
