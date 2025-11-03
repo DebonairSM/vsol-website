@@ -34,7 +34,7 @@ export async function createApp(): Promise<FastifyInstance> {
 
   // Serve static files from the built client
   const publicPath = config.isProduction
-    ? join(__dirname, '../public')
+    ? join(__dirname, 'public')
     : join(__dirname, '../../client/public');
 
   await app.register(fastifyStatic, {
