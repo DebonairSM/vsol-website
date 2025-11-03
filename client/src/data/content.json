@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "title": "Unleash the Value",
+    "subtitle": "Software Consultancy",
+    "description": "We redefine software planning and execution, delivering exceptional value to North American companies. Slash costs by 65% without compromising quality. Boost productivity by 35% with our strategic approach. Explore our case study on \"Nearshoring: VSol and Your Path to Results in 3 Simple Steps.\" Inquire now for details!"
+  },
+  "services": {
+    "title": "We Are VSol",
+    "subtitle": "Microsoft and Open Source Technologies",
+    "mainDescription": "We work with Microsoft .NET and modern open source platforms to create architectures that support the growth of our clients' systems",
+    "items": [
+      {
+        "title": "Staff Augmentation",
+        "description": "Our consulting team in Brazil is made up of professionals fluent in English with expertise across Microsoft and open source technologies. We supplement existing software teams or operate as the sole team for companies looking to reduce their costs and receive an excellent return on their investment"
+      },
+      {
+        "title": "The VSol Difference",
+        "description": "Our clients develop software for large enterprises and global institutions. Our service has a strong impact in many industries and its results affect thousands of people in different parts of the world. We are expanding quickly and we are always looking for the best professionals to work with us. See the Careers section below for more information"
+      },
+      {
+        "title": "Our Methodology",
+        "description": "We are PMI PMP certified, Certified Scrum Masters, and Scrum with Kanban certified from Scrum.org. Our team relies on Agile methodologies to drive our projects forward. We're committed to delivering results that align with our customers' expectations, all while staying within the specified time frame and budget"
+      }
+    ]
+  },
+  "careers": {
+    "title": "Work at VSol Software",
+    "subtitle": "We are looking for the best in our field.",
+    "positions": [
+      {
+        "title": "Azure SQL Database Developer",
+        "description": "Excellent opportunity for a SQL Server DBA and Azure SQL Developer",
+        "email": "work@vsol.software",
+        "needed": [
+          "Proficiency in English to read and write technical documents, chats, e-mails and requirements",
+          "Azure SQL and MS SQL Server configuration and management",
+          "High availability",
+          "Apply data modeling techniques",
+          "Advanced knowledge of SQL Tuning",
+          "Indexes and statistics",
+          "Data security",
+          "Bachelor's degree in Computer Science of similar experience"
+        ],
+        "desirable": [
+          "Understanding of Containers Architecture and CQRS concepts",
+          "Azure SQL, Azure AI Search and data tuning"
+        ],
+        "bigPlus": "Experience with teams working with Scrum/Agile and Azure Cloud Architecture"
+      },
+      {
+        "title": "Fullstack Software Developer",
+        "description": "We are hiring developers with different levels of experience. The candidate must have medium level proficiency in English in order to read, write and understand requirements and internal project communication. If you meet this requirement and are a self-organized person who likes to work in an professional environment, like to use cutting edge technologies, you will enjoy working with us. We pay according to the level of experience demonstrated by the candidate. This position is remote, you must be comfortable working from your home office.",
+        "email": "work@vsol.software",
+        "needed": [
+          "Proficiency in English to read and write technical documents, chats, email and requirements",
+          "Web development",
+          "Knowledge and ability to apply design patterns to solve problems",
+          "Bachelor's degree in Computer Science of similar experience"
+        ],
+        "desirable": [
+          "Experience in ASP.NET Core, C#, JavaScript and Typescript",
+          "Experience in MS SQL Server, Azure Copilot and Azure APIM",
+          "Knowledge of Kendo UI or any other MVVM framework",
+          "Knowledge of Entity Framework Core"
+        ],
+        "bigPlus": "Experience with Scrum/Agile, Azure Services, Angular, Bootstrap, Autofac (DI) and Xamarin Mobile or Flutter"
+      }
+    ]
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Getting out and having fun",
+    "items": [
+      {
+        "title": "The Developers Conference",
+        "description": "With teams distributed throught Brazil, we attend events together in Florianopolis, Sao Paulo, and beyond.",
+        "date": "04/24/2019",
+        "image": "/images/tdc2019.jpg"
+      },
+      {
+        "title": "Coworking",
+        "description": "We take advantage of our periodical coworking events to catch up and share crucial knowledge about our work.",
+        "date": "12/03/2018",
+        "image": "/images/VSol Coworking Dec 3 '18.jpeg"
+      },
+      {
+        "title": "Christmas Party 2015",
+        "description": "For, more than just a day, Christmas is a state of mind. It is found throughout the year whenever faith overcomes doubt, hope conquers despair, and love triumphs over hate. It is present when men of any creed bring love and understanding to the hearts of their fellow man. -Ronald Reagan",
+        "date": "Our Christmas Party was held on 12/12/2015 and we had a great time with family and friends, enjoying secret santa and good food.",
+        "image": "/images/christmas_party_vsol.jpg"
+      },
+      {
+        "title": "paint·ball",
+        "description": "Paintball is a game developed in the 1980s in which players eliminate opponents from play by hitting them with dye-filled, breakable, oil and gelatin paintballs, or pellets, usually shot from a carbon dioxide or compressed air (Nitrogen) powered paintball marker",
+        "date": "Our paintball event was held on 09/15/2015 and we had fun with family and friends",
+        "image": "/images/paintball_vsol.png"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Headquarters",
+    "subtitle": "Virtually Collocated Offices",
+    "location": "VSol is based in Coral Springs, Florida and we are virtually collocated. That just means we work from the comfort of our home offices employing the best collaboration tools to work smarter",
+    "address": "3111 N University Dr. Ste 105 - Coral Springs, FL 33065",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.773881367396!2d-80.25157098496858!3d26.269001183409045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d90536b64e8039%3A0xcdd1c71ce1c6ec70!2s3111+N+University+Dr+%23105%2C+Coral+Springs%2C+FL+33065%2C+USA!5e0!3m2!1sen!2sbr!4v1558192106859!5m2!1sen!2sbr",
+    "email": "info@vsol.software",
+    "phone": "+1 (352) 397-8650"
+  }
+}
+

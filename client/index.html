@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A software company that provides the best total value to your business for Web application development. We provide consulting and staff augmentation services.">
+  <meta name="keywords" content="software, outsourcing, staff augmentation, microsoft, open source, node.js, typescript, postgresql, azure, mvc, website, application, consulting, database, asp.net, javascript, visual solutions, vsol">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Visual Solutions Software Consultants">
+  <meta property="og:description" content="A software company that provides the best total value to your business for Web application development. We provide consulting and staff augmentation services.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://vsol.us">
+  <meta property="og:image" content="http://vsol.us/Content/Images/vsol_logo_underline.png">
+  
+  <title>Visual Solutions Software Consultants</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="font-sans antialiased">
+  <!-- Navigation -->
+  <nav id="main-nav" class="fixed w-full z-50 bg-white shadow-md border-b-4 border-accent-500">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center">
+          <img src="/images/vsol_logo_underline.png" alt="VSol Software" class="h-10 md:h-14" style="max-width: 280px;">
+        </a>
+        
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden text-primary-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        
+        <!-- Desktop Navigation -->
+        <div id="nav-menu" class="hidden md:flex space-x-8 items-center">
+          <a href="#services" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Services</a>
+          <a href="#career" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Careers at VSol</a>
+          <a href="#events" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Events</a>
+          <a href="#contacts" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Contact</a>
+        </div>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div id="mobile-nav" class="hidden md:hidden mt-4 space-y-2">
+        <a href="#services" class="block text-primary-600 hover:text-primary-700 py-2">Services</a>
+        <a href="#career" class="block text-primary-600 hover:text-primary-700 py-2">Careers at VSol</a>
+        <a href="#events" class="block text-primary-600 hover:text-primary-700 py-2">Events</a>
+        <a href="#contacts" class="block text-primary-600 hover:text-primary-700 py-2">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex items-center justify-center hero-background text-white relative overflow-hidden">
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <div class="animate-fade-in hero-content max-w-5xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 uppercase">Unleash the Value</h1>
+        <img src="/images/vsol_sparkels_72x68.png" alt="VSol" class="mx-auto mb-6">
+        <p class="text-xl md:text-2xl max-w-4xl mx-auto mb-8 leading-relaxed" id="hero-description">
+          Loading...
+        </p>
+        <a href="#services" class="inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">
+          <svg class="w-8 h-8 animate-bounce-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- Services content will be injected here -->
+    </div>
+  </section>
+
+  <!-- Careers Section -->
+  <section id="career" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <!-- Careers content will be injected here -->
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- Events content will be injected here -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacts" class="py-20 bg-gradient-to-br from-primary-900 to-primary-700 text-white">
+    <div class="container mx-auto px-4">
+      <!-- Contact content will be injected here -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; <span id="current-year"></span> vsol.software. All rights reserved.</p>
+      <img src="/images/vsol_sparkels_72x68.png" alt="VSol" class="mx-auto mt-4 h-12">
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
+
