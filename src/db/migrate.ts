@@ -12,7 +12,7 @@ async function runMigrations() {
     logger.info('Migrations completed successfully');
     process.exit(0);
   } catch (error) {
-    logger.error('Migration failed:', error);
+    logger.error({ error }, 'Migration failed:');
     process.exit(1);
   }
 }
