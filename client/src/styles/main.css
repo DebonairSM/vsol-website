@@ -24,6 +24,59 @@
     letter-spacing: 0.05em;
   }
 
+  /* AI Navigation Badge */
+  .ai-nav-badge {
+    @apply flex items-center gap-2 px-4 py-2 rounded-full;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1));
+    border: 1.5px solid rgba(139, 92, 246, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .ai-nav-badge:hover {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.2));
+    border-color: #8b5cf6;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  }
+
+  .ai-nav-icon {
+    width: 20px;
+    height: 20px;
+    filter: drop-shadow(0 0 4px rgba(139, 92, 246, 0.5));
+  }
+
+  .ai-nav-text {
+    @apply text-sm font-bold uppercase;
+    letter-spacing: 0.05em;
+    background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Mobile AI Badge */
+  .ai-nav-badge-mobile {
+    @apply flex items-center gap-2 px-4 py-2 rounded-full;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1));
+    border: 1.5px solid rgba(139, 92, 246, 0.4);
+    text-decoration: none;
+  }
+
+  .ai-nav-icon-mobile {
+    width: 20px;
+    height: 20px;
+    filter: drop-shadow(0 0 4px rgba(139, 92, 246, 0.5));
+  }
+
+  .ai-nav-text-mobile {
+    @apply text-sm font-bold uppercase;
+    letter-spacing: 0.05em;
+    background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   /* Hero background with code pattern */
   .hero-background {
     background-image: url('/images/background.jpg');

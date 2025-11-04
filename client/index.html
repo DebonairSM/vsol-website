@@ -47,7 +47,34 @@
         <!-- Desktop Navigation -->
         <div id="nav-menu" class="hidden md:flex space-x-8 items-center">
           <a href="#services" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Services</a>
-          <a href="/agentric.html" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Agentric AI</a>
+          <a href="/agentric.html" class="ai-nav-badge">
+            <svg class="ai-nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="2" fill="url(#navGradient1)" />
+              <circle cx="6" cy="8" r="1.5" fill="url(#navGradient2)" />
+              <circle cx="18" cy="8" r="1.5" fill="url(#navGradient2)" />
+              <circle cx="6" cy="16" r="1.5" fill="url(#navGradient2)" />
+              <circle cx="18" cy="16" r="1.5" fill="url(#navGradient2)" />
+              <line x1="12" y1="12" x2="6" y2="8" stroke="url(#navLineGradient)" stroke-width="1" opacity="0.6" />
+              <line x1="12" y1="12" x2="18" y2="8" stroke="url(#navLineGradient)" stroke-width="1" opacity="0.6" />
+              <line x1="12" y1="12" x2="6" y2="16" stroke="url(#navLineGradient)" stroke-width="1" opacity="0.6" />
+              <line x1="12" y1="12" x2="18" y2="16" stroke="url(#navLineGradient)" stroke-width="1" opacity="0.6" />
+              <defs>
+                <linearGradient id="navGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="navGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="navLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span class="ai-nav-text">AGENTRIC AI</span>
+          </a>
           <a href="#career" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Careers at VSol</a>
           <a href="#events" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Events</a>
           <a href="#contacts" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Contact</a>
@@ -57,7 +84,34 @@
       <!-- Mobile Navigation -->
       <div id="mobile-nav" class="hidden md:hidden mt-4 space-y-2">
         <a href="#services" class="block text-primary-600 hover:text-primary-700 py-2">Services</a>
-        <a href="/agentric.html" class="block text-primary-600 hover:text-primary-700 py-2">Agentric AI</a>
+        <a href="/agentric.html" class="ai-nav-badge-mobile">
+          <svg class="ai-nav-icon-mobile" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="2" fill="url(#navGradientMobile1)" />
+            <circle cx="6" cy="8" r="1.5" fill="url(#navGradientMobile2)" />
+            <circle cx="18" cy="8" r="1.5" fill="url(#navGradientMobile2)" />
+            <circle cx="6" cy="16" r="1.5" fill="url(#navGradientMobile2)" />
+            <circle cx="18" cy="16" r="1.5" fill="url(#navGradientMobile2)" />
+            <line x1="12" y1="12" x2="6" y2="8" stroke="url(#navLineGradientMobile)" stroke-width="1" opacity="0.6" />
+            <line x1="12" y1="12" x2="18" y2="8" stroke="url(#navLineGradientMobile)" stroke-width="1" opacity="0.6" />
+            <line x1="12" y1="12" x2="6" y2="16" stroke="url(#navLineGradientMobile)" stroke-width="1" opacity="0.6" />
+            <line x1="12" y1="12" x2="18" y2="16" stroke="url(#navLineGradientMobile)" stroke-width="1" opacity="0.6" />
+            <defs>
+              <linearGradient id="navGradientMobile1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+              </linearGradient>
+              <linearGradient id="navGradientMobile2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+              </linearGradient>
+              <linearGradient id="navLineGradientMobile" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="ai-nav-text-mobile">AGENTRIC AI</span>
+        </a>
         <a href="#career" class="block text-primary-600 hover:text-primary-700 py-2">Careers at VSol</a>
         <a href="#events" class="block text-primary-600 hover:text-primary-700 py-2">Events</a>
         <a href="#contacts" class="block text-primary-600 hover:text-primary-700 py-2">Contact</a>
@@ -112,7 +166,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-8">
+  <footer class="bg-white text-gray-900 py-8">
     <div class="container mx-auto px-4 text-center">
       <p>&copy; <span id="current-year"></span> vsol.software. All rights reserved.</p>
       <img src="/images/vsol_sparkels_72x68.png" alt="VSol" class="mx-auto mt-4 h-12">

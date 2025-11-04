@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Agentric Software Development - AI-driven development with human oversight. Faster delivery, lower costs, higher quality.">
-  <meta name="keywords" content="ai software development, agentric development, ai agents, software automation, ai coding, agent master, rommel, vsol">
+  <meta name="description" content="Agentric AI - AI-driven development with human oversight. Faster delivery, lower costs, higher quality.">
+  <meta name="keywords" content="ai software development, agentric ai, ai agents, software automation, ai coding, agent master, rommel, vsol">
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Agentric Software Development | VSol Software">
+  <meta property="og:title" content="Agentric AI | VSol Software">
   <meta property="og:description" content="AI-driven development with human oversight. Faster delivery, lower costs, higher quality.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vsol.software/agentric.html">
   <meta property="og:image" content="https://vsol.software/images/vsol_logo_underline.png">
   
-  <title>Agentric Software Development | VSol Software</title>
+  <title>Agentric AI | VSol Software</title>
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -71,20 +71,70 @@
   <section id="hero" class="min-h-screen flex items-center justify-center agentric-hero text-white relative overflow-hidden">
     <div class="container mx-auto px-4 text-center relative z-10">
       <div class="animate-fade-in-up hero-content-agentric max-w-5xl mx-auto">
+        <!-- AI Icon -->
+        <svg class="ai-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Neural network nodes -->
+          <circle cx="50" cy="50" r="8" fill="url(#gradient1)" />
+          <circle cx="20" cy="30" r="6" fill="url(#gradient2)" />
+          <circle cx="80" cy="30" r="6" fill="url(#gradient2)" />
+          <circle cx="20" cy="70" r="6" fill="url(#gradient2)" />
+          <circle cx="80" cy="70" r="6" fill="url(#gradient2)" />
+          <circle cx="35" cy="15" r="5" fill="url(#gradient3)" />
+          <circle cx="65" cy="15" r="5" fill="url(#gradient3)" />
+          <circle cx="35" cy="85" r="5" fill="url(#gradient3)" />
+          <circle cx="65" cy="85" r="5" fill="url(#gradient3)" />
+          
+          <!-- Connections -->
+          <line x1="50" y1="50" x2="20" y2="30" stroke="url(#lineGradient)" stroke-width="2" opacity="0.6" />
+          <line x1="50" y1="50" x2="80" y2="30" stroke="url(#lineGradient)" stroke-width="2" opacity="0.6" />
+          <line x1="50" y1="50" x2="20" y2="70" stroke="url(#lineGradient)" stroke-width="2" opacity="0.6" />
+          <line x1="50" y1="50" x2="80" y2="70" stroke="url(#lineGradient)" stroke-width="2" opacity="0.6" />
+          <line x1="20" y1="30" x2="35" y2="15" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" />
+          <line x1="80" y1="30" x2="65" y2="15" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" />
+          <line x1="20" y1="70" x2="35" y2="85" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" />
+          <line x1="80" y1="70" x2="65" y2="85" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" />
+          
+          <!-- Gradients -->
+          <defs>
+            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+        </svg>
+        
         <h1 class="text-5xl md:text-7xl font-bold mb-6 uppercase tracking-tight" id="hero-title">
-          Agentric Software Development
+          Agentric AI
         </h1>
         <div class="flex justify-center mb-6">
           <div class="accent-bar"></div>
         </div>
-        <p class="text-2xl md:text-3xl font-semibold mb-4 text-accent-400" id="hero-subtitle">
+        <p class="text-2xl md:text-3xl font-semibold mb-4 gradient-text-agentric" id="hero-subtitle">
           AI-Driven Development with Human Oversight
         </p>
         <p class="text-lg md:text-xl max-w-4xl mx-auto mb-8 leading-relaxed text-gray-300" id="hero-description">
           Loading...
         </p>
-        <a href="#introduction" class="inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-accent-500 hover:bg-accent-500 hover:bg-opacity-20 transition-all duration-300">
-          <svg class="w-8 h-8 animate-bounce-slow text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <a href="#introduction" class="inline-flex items-center justify-center w-16 h-16 rounded-full transition-all duration-300" style="border: 2px solid #8b5cf6;">
+          <svg class="w-8 h-8 animate-bounce-slow" fill="none" stroke="url(#arrowGradient)" viewBox="0 0 24 24">
+            <defs>
+              <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+              </linearGradient>
+            </defs>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </a>
@@ -110,7 +160,7 @@
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
         <div class="accent-bar mx-auto"></div>
-        <h2 class="section-header-agentric">Why Agentric Development?</h2>
+        <h2 class="section-header-agentric">Why Agentric AI?</h2>
         <p class="section-subheader-agentric">Real advantages for your business</p>
       </div>
       <div id="benefits-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -152,13 +202,13 @@
             >
           </div>
           <div class="profile-content">
-            <h3 class="text-4xl font-bold mb-2 text-accent-400" id="profile-name">Rommel</h3>
-            <p class="text-2xl text-primary-400 mb-6 font-semibold" id="profile-title">Agent Master</p>
+            <h3 class="text-4xl font-bold mb-2 gradient-text-agentric" id="profile-name">Rommel</h3>
+            <p class="text-2xl mb-6 font-semibold" id="profile-title" style="color: #06b6d4;">Agent Master</p>
             <div class="text-gray-300 text-lg leading-relaxed mb-6" id="profile-bio">
               <p>Loading...</p>
             </div>
             <div class="mb-6">
-              <h4 class="text-xl font-semibold mb-3 text-accent-400">Expertise</h4>
+              <h4 class="text-xl font-semibold mb-3" style="color: #8b5cf6;">Expertise</h4>
               <div id="expertise-tags" class="flex flex-wrap">
                 <!-- Expertise tags will be injected here -->
               </div>
@@ -194,10 +244,10 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black text-gray-400 py-8 border-t border-accent-500">
+  <footer class="bg-white text-gray-900 py-8" style="border-top: 2px solid #8b5cf6;">
     <div class="container mx-auto px-4 text-center">
       <p>&copy; <span id="current-year"></span> vsol.software. All rights reserved.</p>
-      <p class="mt-2 text-sm">Agentric Software Development | A VSol Software Initiative</p>
+      <p class="mt-2 text-sm">Agentric AI | A VSol Software Initiative</p>
       <img src="/images/vsol_sparkels_72x68.png" alt="VSol" class="mx-auto mt-4 h-12 opacity-80">
     </div>
   </footer>

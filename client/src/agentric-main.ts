@@ -5,7 +5,7 @@ import { initSmoothScroll } from './utils/smooth-scroll';
 // Load agentric page content
 async function loadAgenticContent() {
   try {
-    const response = await fetch('/src/data/agentric-content.json');
+    const response = await fetch('/data/agentric-content.json');
     const data = await response.json();
 
     // Populate hero section
@@ -31,7 +31,7 @@ async function loadAgenticContent() {
     if (benefitsGrid && data.benefits) {
       benefitsGrid.innerHTML = data.benefits.map((benefit: any) => `
         <div class="benefit-card">
-          <h3 class="text-2xl font-bold mb-4 text-accent-400">${benefit.title}</h3>
+          <h3 class="text-2xl font-bold mb-4" style="color: #06b6d4;">${benefit.title}</h3>
           <p class="text-gray-300 leading-relaxed">${benefit.description}</p>
         </div>
       `).join('');
@@ -45,7 +45,7 @@ async function loadAgenticContent() {
     if (servicesGrid && data.services.items) {
       servicesGrid.innerHTML = data.services.items.map((service: any) => `
         <div class="card-agentric">
-          <h3 class="text-xl font-bold mb-3 text-accent-400">${service.title}</h3>
+          <h3 class="text-xl font-bold mb-3" style="color: #8b5cf6;">${service.title}</h3>
           <p class="text-gray-300 text-sm leading-relaxed">${service.description}</p>
         </div>
       `).join('');
@@ -58,8 +58,17 @@ async function loadAgenticContent() {
     const profileQuote = document.getElementById('profile-quote');
     const expertiseTags = document.getElementById('expertise-tags');
     
-    if (profileName) profileName.textContent = data.agentMaster.name;
-    if (profileTitle) profileTitle.textContent = data.agentMaster.title;
+    if (profileName) {
+      profileName.textContent = data.agentMaster.name;
+      profileName.style.background = 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)';
+      profileName.style.backgroundClip = 'text';
+      profileName.style.webkitBackgroundClip = 'text';
+      profileName.style.webkitTextFillColor = 'transparent';
+    }
+    if (profileTitle) {
+      profileTitle.textContent = data.agentMaster.title;
+      profileTitle.style.color = '#06b6d4';
+    }
     if (profileBio) profileBio.innerHTML = `<p>${data.agentMaster.bio}</p>`;
     if (profileQuote) profileQuote.innerHTML = `<p>"${data.agentMaster.quote}"</p>`;
     
