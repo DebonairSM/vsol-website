@@ -10,6 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'client/index.html'),
+        agentric: path.resolve(__dirname, 'client/agentric.html'),
       },
     },
   },

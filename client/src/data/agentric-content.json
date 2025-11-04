@@ -1,0 +1,83 @@
+{
+  "hero": {
+    "title": "Agentric Software Development",
+    "subtitle": "AI-Driven Development with Human Oversight",
+    "description": "We combine advanced AI agents with expert human guidance to deliver software faster, smarter, and more efficiently. Every project is orchestrated by Rommel, our Agent Master, ensuring quality and precision in every line of code."
+  },
+  "introduction": {
+    "title": "The Future of Software Development",
+    "content": "Agentric Software Development represents a fundamental shift in how software is built. By leveraging AI agents for routine tasks, code generation, and testing while maintaining human oversight for architecture, strategy, and critical decisions, we achieve unprecedented speed and quality. This approach allows us to deliver enterprise-grade solutions at a fraction of traditional costs and timelines."
+  },
+  "benefits": [
+    {
+      "title": "Accelerated Delivery",
+      "description": "AI agents handle repetitive coding tasks, automated testing, and documentation generation, allowing us to deliver projects 3-5x faster than traditional development approaches.",
+      "icon": "speed"
+    },
+    {
+      "title": "Cost Efficiency",
+      "description": "By automating routine development work, we reduce project costs by up to 70% while maintaining high code quality and comprehensive test coverage.",
+      "icon": "cost"
+    },
+    {
+      "title": "Consistent Quality",
+      "description": "AI agents apply best practices uniformly across all code, ensuring consistent style, thorough documentation, and comprehensive error handling throughout your project.",
+      "icon": "quality"
+    },
+    {
+      "title": "Human Expertise",
+      "description": "Every decision that matters is made by experienced developers. AI handles the mechanics; humans handle the strategy, architecture, and innovation.",
+      "icon": "expertise"
+    }
+  ],
+  "services": {
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "AI-Accelerated Web Applications",
+        "description": "Full-stack web applications built with AI assistance for frontend, backend, and database layers. We use AI agents for component generation, API development, and automated testing while maintaining human oversight for architecture and user experience design."
+      },
+      {
+        "title": "Legacy System Modernization",
+        "description": "Transform outdated systems into modern, maintainable codebases. AI agents analyze legacy code, generate documentation, and assist in refactoring while human experts guide the modernization strategy and ensure business logic integrity."
+      },
+      {
+        "title": "Automated Testing & Quality Assurance",
+        "description": "Comprehensive test suite generation and maintenance using AI. We create unit tests, integration tests, and end-to-end tests automatically, with human validation of test coverage and critical paths."
+      },
+      {
+        "title": "API Development & Integration",
+        "description": "Rapid API development with AI-generated endpoints, documentation, and client SDKs. Human experts design the API architecture and ensure security, scalability, and proper error handling."
+      },
+      {
+        "title": "Code Review & Optimization",
+        "description": "AI-powered code analysis identifies performance bottlenecks, security vulnerabilities, and maintainability issues. Human experts provide strategic recommendations and implement optimizations."
+      },
+      {
+        "title": "Technical Documentation",
+        "description": "Automated generation of API documentation, code comments, architecture diagrams, and user guides. AI handles the writing; humans ensure accuracy and clarity."
+      }
+    ]
+  },
+  "agentMaster": {
+    "name": "Rommel",
+    "title": "Agent Master",
+    "bio": "Rommel founded VSol Software and has spent over 15 years architecting enterprise software solutions for global clients. As Agent Master, he orchestrates AI agents to handle development tasks while maintaining strategic oversight of every project. His expertise spans full-stack development, cloud architecture, and agile methodologies, ensuring that AI acceleration never comes at the cost of quality or maintainability.",
+    "expertise": [
+      "AI Agent Orchestration",
+      "Enterprise Architecture",
+      "Full-Stack Development",
+      "Cloud Infrastructure (Azure, AWS)",
+      "Agile & Scrum Methodologies",
+      "Team Leadership & Mentoring"
+    ],
+    "quote": "AI agents are remarkable tools, but software development is still fundamentally a human endeavor. My role is to ensure that we harness AI's speed and consistency while applying human judgment where it matters most."
+  },
+  "cta": {
+    "title": "Ready to Accelerate Your Development?",
+    "description": "Discover how Agentric Software Development can transform your next project. Get faster delivery, lower costs, and higher quality.",
+    "buttonText": "Start a Conversation",
+    "email": "rommel@vsol.software"
+  }
+}
+

@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@layer components {
+  /* Navigation styles - darker theme */
+  #main-nav {
+    @apply bg-gray-900 shadow-lg border-b-2 border-accent-500;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link {
+    @apply text-sm font-semibold uppercase text-gray-300 hover:text-accent-500;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+  }
+
+  /* Agentric Hero - Modern dark gradient with tech feel */
+  .agentric-hero {
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 25%, #0f1729 50%, #1e2a4a 75%, #0d1526 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .agentric-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(25, 118, 210, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(250, 185, 9, 0.1) 0%, transparent 50%);
+    animation: pulse-glow 8s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+  }
+
+  .agentric-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(90deg, rgba(250, 185, 9, 0.03) 1px, transparent 1px),
+      linear-gradient(rgba(250, 185, 9, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+  }
+
+  /* Hero content with glass effect */
+  .hero-content-agentric {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(250, 185, 9, 0.2);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (min-width: 768px) {
+    .hero-content-agentric {
+      padding: 4rem 3rem;
+    }
+  }
+
+  /* Section styling for dark theme */
+  .section-dark {
+    @apply bg-gray-900;
+  }
+
+  .section-darker {
+    @apply bg-gray-950;
+  }
+
+  .section-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+
+  /* Cards with modern dark styling */
+  .card-agentric {
+    @apply bg-gray-800 rounded-lg shadow-xl p-6 transition-all duration-300 border border-gray-700;
+  }
+
+  .card-agentric:hover {
+    @apply transform -translate-y-1 shadow-2xl border-accent-500;
+    box-shadow: 0 20px 40px rgba(250, 185, 9, 0.1);
+  }
+
+  /* Benefit cards with icons */
+  .benefit-card {
+    @apply bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-8 border border-gray-700 transition-all duration-300;
+  }
+
+  .benefit-card:hover {
+    @apply border-primary-500;
+    box-shadow: 0 10px 30px rgba(25, 118, 210, 0.2);
+  }
+
+  /* Profile section styling */
+  .profile-container {
+    @apply flex flex-col md:flex-row gap-8 items-center md:items-start;
+  }
+
+  .profile-image-wrapper {
+    @apply relative;
+  }
+
+  .profile-image {
+    @apply rounded-lg shadow-2xl w-64 h-64 object-cover border-4 border-accent-500;
+  }
+
+  .profile-content {
+    @apply flex-1;
+  }
+
+  /* Expertise tags */
+  .expertise-tag {
+    @apply inline-block bg-primary-900 text-primary-300 px-4 py-2 rounded-full text-sm font-medium mr-2 mb-2 border border-primary-700;
+  }
+
+  /* Buttons with glow effect */
+  .btn-agentric-primary {
+    @apply inline-block px-8 py-4 bg-gradient-to-r from-accent-600 to-accent-500 text-gray-900 font-bold rounded-lg shadow-lg transition-all duration-300;
+  }
+
+  .btn-agentric-primary:hover {
+    @apply shadow-2xl transform -translate-y-1;
+    box-shadow: 0 10px 40px rgba(250, 185, 9, 0.4);
+  }
+
+  .btn-agentric-secondary {
+    @apply inline-block px-8 py-4 bg-gray-800 text-gray-100 font-semibold rounded-lg shadow-md border-2 border-primary-600 transition-all duration-300;
+  }
+
+  .btn-agentric-secondary:hover {
+    @apply bg-primary-900 border-primary-500;
+  }
+
+  /* Section headers */
+  .section-header-agentric {
+    @apply text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600;
+  }
+
+  .section-subheader-agentric {
+    @apply text-xl md:text-2xl text-gray-400 mb-8;
+  }
+
+  /* Accent bar for sections */
+  .accent-bar {
+    @apply w-20 h-1 bg-gradient-to-r from-accent-500 to-primary-500 mb-6;
+  }
+
+  /* Quote styling */
+  .quote-box {
+    @apply border-l-4 border-accent-500 pl-6 italic text-gray-300 text-lg bg-gray-800 bg-opacity-50 p-6 rounded-r-lg;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    position: relative;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(250, 185, 9, 0.1) 0%, transparent 70%);
+  }
+}
+
+@layer utilities {
+  /* Fade in animation */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Gradient text */
+  .gradient-text-agentric {
+    @apply bg-gradient-to-r from-accent-400 via-primary-400 to-accent-500 bg-clip-text text-transparent;
+  }
+
+  /* Glow effect */
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(250, 185, 9, 0.3);
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(25, 118, 210, 0.3);
+  }
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-500;
+}
+
