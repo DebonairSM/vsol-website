@@ -13,14 +13,14 @@
 }
 
 @layer components {
-  /* Navigation styles - darker theme */
+  /* Navigation styles - white background like main site */
   #main-nav {
-    @apply bg-gray-900 shadow-lg border-b-2 border-accent-500;
+    @apply bg-white shadow-lg border-b-2 border-accent-500;
     transition: all 0.3s ease;
   }
 
   .nav-link {
-    @apply text-sm font-semibold uppercase text-gray-300 hover:text-accent-500;
+    @apply text-sm font-semibold uppercase text-primary-600 hover:text-primary-700;
     letter-spacing: 0.05em;
     transition: color 0.3s ease;
   }
