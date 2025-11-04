@@ -239,8 +239,8 @@ function loadContact(contact: ContentData['contact']) {
   if (!section) return;
 
   const html = `
-    <div class="contact-content-wrapper">
-      <div class="flex mb-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex mb-12">
         <div class="w-2 bg-accent-500 mr-6 flex-shrink-0"></div>
         <div>
           <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 uppercase">${contact.title}</h2>
@@ -248,55 +248,57 @@ function loadContact(contact: ContentData['contact']) {
         </div>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div>
-          <h3 class="text-2xl font-bold mb-4">Location</h3>
-          <p class="mb-4">${contact.location}</p>
-          <div class="mb-4">
-            <p class="font-semibold mb-2">Headquarters:</p>
-            <a href="https://goo.gl/maps/3ei5xN3knPN2" target="_blank" class="text-accent-500 hover:underline">
-              ${contact.address}
+      <div class="contact-content-wrapper">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Location</h3>
+            <p class="mb-4">${contact.location}</p>
+            <div class="mb-4">
+              <p class="font-semibold mb-2">Headquarters:</p>
+              <a href="https://goo.gl/maps/3ei5xN3knPN2" target="_blank" class="text-accent-500 hover:underline">
+                ${contact.address}
+              </a>
+            </div>
+            ${contact.additionalLocation ? `
+            <div class="mb-4">
+              <p class="font-semibold mb-2">Additional Presence:</p>
+              <p class="text-gray-200">${contact.additionalLocation}</p>
+            </div>
+            ` : ''}
+            <div class="mt-6">
+              <iframe 
+                src="${contact.mapUrl}" 
+                width="100%" 
+                height="300" 
+                frameborder="0" 
+                style="border:0" 
+                allowfullscreen
+                class="rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Contact</h3>
+            <p class="mb-2">
+              Email: <a href="mailto:${contact.email}" class="text-accent-500 hover:underline">${contact.email}</a>
+            </p>
+            <p class="mb-6">
+              Phone: ${contact.phone}
+            </p>
+            
+            ${contact.calendlyUrl ? `
+            <button id="open-booking-modal" class="inline-flex items-center gap-2 bg-accent-500 text-white px-6 py-3 rounded-lg hover:bg-accent-600 transition-colors mb-4 font-semibold cursor-pointer">
+              <span class="material-icons">calendar_month</span>
+              Book a Meeting with Rommel
+            </button>
+            <br>
+            ` : ''}
+            
+            <a href="https://www.linkedin.com/company/vsol/" target="_blank" class="btn-primary">
+              Find us on LinkedIn
             </a>
           </div>
-          ${contact.additionalLocation ? `
-          <div class="mb-4">
-            <p class="font-semibold mb-2">Additional Presence:</p>
-            <p class="text-gray-200">${contact.additionalLocation}</p>
-          </div>
-          ` : ''}
-          <div class="mt-6">
-            <iframe 
-              src="${contact.mapUrl}" 
-              width="100%" 
-              height="300" 
-              frameborder="0" 
-              style="border:0" 
-              allowfullscreen
-              class="rounded-lg"
-            ></iframe>
-          </div>
-        </div>
-        
-        <div>
-          <h3 class="text-2xl font-bold mb-4">Contact</h3>
-          <p class="mb-2">
-            Email: <a href="mailto:${contact.email}" class="text-accent-500 hover:underline">${contact.email}</a>
-          </p>
-          <p class="mb-6">
-            Phone: ${contact.phone}
-          </p>
-          
-          ${contact.calendlyUrl ? `
-          <button id="open-booking-modal" class="inline-flex items-center gap-2 bg-accent-500 text-white px-6 py-3 rounded-lg hover:bg-accent-600 transition-colors mb-4 font-semibold cursor-pointer">
-            <span class="material-icons">calendar_month</span>
-            Book a Meeting with Rommel
-          </button>
-          <br>
-          ` : ''}
-          
-          <a href="https://www.linkedin.com/company/vsol/" target="_blank" class="btn-primary">
-            Find us on LinkedIn
-          </a>
         </div>
       </div>
     </div>
