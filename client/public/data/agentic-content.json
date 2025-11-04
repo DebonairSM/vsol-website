@@ -1,12 +1,12 @@
 {
   "hero": {
-    "title": "Agentric AI",
+    "title": "Agentic AI",
     "subtitle": "AI-Driven Development with Human Oversight",
     "description": "We combine advanced AI agents with expert human guidance to deliver software faster, smarter, and more efficiently. Every project is orchestrated by Rommel, our Agent Master, ensuring quality and precision in every line of code."
   },
   "introduction": {
     "title": "The Future of Software Development",
-    "content": "Agentric AI represents a fundamental shift in how software is built. By leveraging AI agents for routine tasks, code generation, and testing while maintaining human oversight for architecture, strategy, and critical decisions, we achieve unprecedented speed and quality. This approach allows us to deliver enterprise-grade solutions at a fraction of traditional costs and timelines."
+    "content": "Agentic AI represents a fundamental shift in how software is built. By leveraging AI agents for routine tasks, code generation, and testing while maintaining human oversight for architecture, strategy, and critical decisions, we achieve unprecedented speed and quality. This approach allows us to deliver enterprise-grade solutions at a fraction of traditional costs and timelines."
   },
   "featuredProduct": {
     "badge": "NEW OFFERING",
@@ -106,7 +106,7 @@
   },
   "cta": {
     "title": "Ready to Accelerate Your Development?",
-    "description": "Discover how Agentric AI can transform your next project. Get faster delivery, lower costs, and higher quality.",
+    "description": "Discover how Agentic AI can transform your next project. Get faster delivery, lower costs, and higher quality.",
     "buttonText": "Start a Conversation",
     "email": "rommel@vsol.software",
     "calendlyUrl": "https://calendly.com/vsol/meeting-with-bandeira",

@@ -10,7 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'client/index.html'),
-        agentric: path.resolve(__dirname, 'client/agentric.html'),
+        agentic: path.resolve(__dirname, 'client/agentic.html'),
         spreadsheet: path.resolve(__dirname, 'client/spreadsheet-automation.html'),
         secretLeads: path.resolve(__dirname, 'client/secret-leads-viewer.html'),
       },

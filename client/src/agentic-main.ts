@@ -1,11 +1,11 @@
-import './styles/agentric.css';
+import './styles/agentic.css';
 import { initNavigation } from './components/navigation';
 import { initSmoothScroll } from './utils/smooth-scroll';
 
-// Load agentric page content
+// Load agentic page content
 async function loadAgenticContent() {
   try {
-    const response = await fetch('/data/agentric-content.json');
+    const response = await fetch('/data/agentic-content.json');
     const data = await response.json();
 
     // Populate hero section
@@ -117,13 +117,13 @@ async function loadAgenticContent() {
         
         if (service.link) {
           return `
-            <a href="${service.link}" class="card-agentric card-agentric-link" onclick="window.location.href='${service.link}'; return false;">
+            <a href="${service.link}" class="card-agentic card-agentic-link" onclick="window.location.href='${service.link}'; return false;">
               ${cardContent}
               <div class="mt-4 text-cyan-600 font-medium text-sm">Learn More →</div>
             </a>
           `;
         } else {
-          return `<div class="card-agentric">${cardContent}</div>`;
+          return `<div class="card-agentic">${cardContent}</div>`;
         }
       }).join('');
     }
@@ -174,9 +174,9 @@ async function loadAgenticContent() {
       ctaCalendlyButton.setAttribute('href', data.cta.calendlyUrl);
     }
 
-    console.log('Agentric content loaded successfully');
+    console.log('Agentic content loaded successfully');
   } catch (error) {
-    console.error('Failed to load agentric content:', error);
+    console.error('Failed to load agentic content:', error);
   }
 }
 
@@ -198,9 +198,9 @@ async function init() {
     // Load content
     await loadAgenticContent();
 
-    console.log('Agentric page initialized successfully');
+    console.log('Agentic page initialized successfully');
   } catch (error) {
-    console.error('Failed to initialize agentric page:', error);
+    console.error('Failed to initialize agentic page:', error);
   }
 }
 

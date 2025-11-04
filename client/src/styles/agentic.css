@@ -25,14 +25,14 @@
     transition: color 0.3s ease;
   }
 
-  /* Agentric Hero - Light theme with subtle gradients */
-  .agentric-hero {
+  /* Agentic Hero - Light theme with subtle gradients */
+  .agentic-hero {
     background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 25%, #dbeafe 50%, #e0f2fe 75%, #f0f9ff 100%);
     position: relative;
     overflow: hidden;
   }
 
-  .agentric-hero::before {
+  .agentic-hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -51,7 +51,7 @@
     50% { opacity: 1; }
   }
 
-  .agentric-hero::after {
+  .agentic-hero::after {
     content: '';
     position: absolute;
     top: 0;
@@ -66,7 +66,7 @@
   }
 
   /* Hero content with glass effect */
-  .hero-content-agentric {
+  .hero-content-agentic {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
     border: 2px solid rgba(139, 92, 246, 0.2);
@@ -76,7 +76,7 @@
   }
 
   @media (min-width: 768px) {
-    .hero-content-agentric {
+    .hero-content-agentic {
       padding: 4rem 3rem;
     }
   }
@@ -95,23 +95,23 @@
   }
 
   /* Cards with modern light styling */
-  .card-agentric {
+  .card-agentic {
     @apply bg-white rounded-lg shadow-lg p-6 transition-all duration-300 border-2 border-gray-200;
   }
 
-  .card-agentric:hover {
+  .card-agentic:hover {
     @apply transform -translate-y-1 shadow-2xl;
     border-color: #8b5cf6;
     box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
   }
 
   /* Clickable service cards */
-  .card-agentric-link {
+  .card-agentic-link {
     @apply block no-underline;
     cursor: pointer;
   }
 
-  .card-agentric-link:hover {
+  .card-agentic-link:hover {
     border-color: #06b6d4;
     box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
   }
@@ -164,7 +164,7 @@
     transition: all 0.3s ease;
   }
 
-  .card-agentric:hover .service-logo {
+  .card-agentic:hover .service-logo {
     transform: scale(1.15);
     filter: grayscale(0%) drop-shadow(0 6px 12px rgba(139, 92, 246, 0.4));
   }
@@ -175,7 +175,7 @@
     transition: all 0.3s ease;
   }
 
-  .card-agentric:hover .service-icon {
+  .card-agentic:hover .service-icon {
     transform: scale(1.15) rotate(5deg);
   }
 
@@ -187,7 +187,7 @@
     transition: all 0.3s ease;
   }
 
-  .card-agentric:hover .service-material-icon {
+  .card-agentic:hover .service-material-icon {
     transform: scale(1.2);
     color: #06b6d4;
     filter: drop-shadow(0 4px 12px rgba(6, 182, 212, 0.5));
@@ -212,36 +212,36 @@
   }
 
   /* Buttons with glow effect */
-  .btn-agentric-primary {
+  .btn-agentic-primary {
     @apply inline-block px-8 py-4 text-white font-bold rounded-lg shadow-lg transition-all duration-300;
     background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
   }
 
-  .btn-agentric-primary:hover {
+  .btn-agentic-primary:hover {
     @apply shadow-2xl transform -translate-y-1;
     box-shadow: 0 10px 40px rgba(139, 92, 246, 0.5);
   }
 
-  .btn-agentric-secondary {
+  .btn-agentic-secondary {
     @apply inline-block px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg shadow-md transition-all duration-300;
     border: 2px solid #8b5cf6;
   }
 
-  .btn-agentric-secondary:hover {
+  .btn-agentic-secondary:hover {
     background-color: rgba(139, 92, 246, 0.05);
     border-color: #06b6d4;
     box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
   }
 
   /* Section headers */
-  .section-header-agentric {
+  .section-header-agentic {
     @apply text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text;
     background-image: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
     line-height: 1.3;
     padding-bottom: 0.1em;
   }
 
-  .section-subheader-agentric {
+  .section-subheader-agentic {
     @apply text-xl md:text-2xl text-gray-600 mb-8;
     line-height: 1.4;
   }
@@ -409,7 +409,7 @@
   }
 
   /* Gradient text */
-  .gradient-text-agentric {
+  .gradient-text-agentic {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 50%, #a855f7 100%);
   }
