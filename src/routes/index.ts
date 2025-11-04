@@ -14,8 +14,15 @@ export async function registerRoutes(app: FastifyInstance) {
   app.setNotFoundHandler((request, reply) => {
     if (request.url.startsWith('/api')) {
       reply.status(404).send({ error: 'API endpoint not found' });
+    } else if (
+      request.url.startsWith('/data/') ||
+      request.url.startsWith('/images/') ||
+      request.url.startsWith('/assets/')
+    ) {
+      // Don't serve index.html for static asset requests - let them 404
+      reply.status(404).send({ error: 'File not found' });
     } else {
-      // Serve index.html for client-side routing
+      // Serve index.html for client-side routing (actual page routes)
       reply.sendFile('index.html');
     }
   });
