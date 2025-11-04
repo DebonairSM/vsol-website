@@ -41,6 +41,11 @@
       "title": "Human Expertise",
       "description": "Every decision that matters is made by experienced developers. AI handles the mechanics; humans handle the strategy, architecture, and innovation.",
       "icon": "expertise"
+    },
+    {
+      "title": "Modern Cloud Architecture",
+      "description": "We leverage Render for lightning-fast deployments and real CI/CD pipelines. Built entirely on open-source technologies like top-shelf Node.js and Linux, we pile on the savings while delivering enterprise-grade performance. All these proven, cost-effective technologies mean lower costs for you.",
+      "icon": "cloud"
     }
   ],
   "services": {
@@ -51,29 +56,26 @@
         "description": "Full-stack web applications built with AI assistance for frontend, backend, and database layers. We use AI agents for component generation, API development, and automated testing while maintaining human oversight for architecture and user experience design."
       },
       {
+        "title": "Spreadsheet Automation Platform",
+        "description": "Transform manual spreadsheet workflows into automated systems with AI-generated interactive mockups delivered during discovery calls. We analyze your current processes, design streamlined solutions, and provide working demonstrations same-day. Complete with workflow documentation, ROI analysis, and deployment-ready prototypes.",
+        "link": "/spreadsheet-automation.html"
+      },
+      {
         "title": "Legacy System Modernization",
         "description": "Transform outdated systems into modern, maintainable codebases. AI agents analyze legacy code, generate documentation, and assist in refactoring while human experts guide the modernization strategy and ensure business logic integrity."
       },
       {
-        "title": "Automated Testing & Quality Assurance",
-        "description": "Comprehensive test suite generation and maintenance using AI. We create unit tests, integration tests, and end-to-end tests automatically, with human validation of test coverage and critical paths."
-      },
-      {
-        "title": "API Development & Integration",
-        "description": "Rapid API development with AI-generated endpoints, documentation, and client SDKs. Human experts design the API architecture and ensure security, scalability, and proper error handling."
+        "title": "API Development & Testing Suite",
+        "description": "End-to-end API development with AI-generated endpoints, comprehensive test suites, and automated documentation. Human experts design the architecture and ensure security, scalability, and quality."
       },
       {
         "title": "Code Review & Optimization",
-        "description": "AI-powered code analysis identifies performance bottlenecks, security vulnerabilities, and maintainability issues. Human experts provide strategic recommendations and implement optimizations."
-      },
-      {
-        "title": "Technical Documentation",
-        "description": "Automated generation of API documentation, code comments, architecture diagrams, and user guides. AI handles the writing; humans ensure accuracy and clarity."
+        "description": "AI-powered code analysis identifies performance bottlenecks, security vulnerabilities, and maintainability issues. Human experts provide strategic recommendations, implement optimizations, and conduct penetration testing to validate security posture. Comprehensive assessments include static code analysis, dynamic security testing, and vulnerability scanning."
       },
       {
         "title": "Local LLM Integration",
         "description": "Set up and integrate local Large Language Models like Llama and Mistral into your applications. We handle installation, configuration, and optimization to give you the power of AI while keeping your data private and on-premises. Perfect for organizations with strict data security requirements.",
-        "icons": ["🦙"]
+        "icons": ["computer", "lock"]
       },
       {
         "title": "LLM API Integration",
@@ -81,9 +83,9 @@
         "logos": ["openai", "anthropic", "grok"]
       },
       {
-        "title": "Spreadsheet Automation Platform",
-        "description": "Transform manual spreadsheet workflows into automated systems with AI-generated interactive mockups delivered during discovery calls. We analyze your current processes, design streamlined solutions, and provide working demonstrations same-day. Complete with workflow documentation, ROI analysis, and deployment-ready prototypes.",
-        "link": "/spreadsheet-automation.html"
+        "title": "Cloud Deployment & CI/CD",
+        "description": "We use Render for lightning-fast deployments and real continuous integration/continuous deployment pipelines. Built on open-source foundations—top-shelf Node.js, Linux, and battle-tested frameworks—our infrastructure is cost-effective, reliable, and scales with your business. Modern cloud architecture with maximum savings.",
+        "icons": ["cloud_upload", "rocket_launch"]
       }
     ]
   },
@@ -95,7 +97,8 @@
       "AI Agent Orchestration",
       "Enterprise Architecture",
       "Full-Stack Development",
-      "Cloud Infrastructure (Azure, Render)",
+      "Cloud Infrastructure (Render, Azure)",
+      "Open-Source Technologies (Node.js, Linux)",
       "Agile & Scrum Methodologies",
       "Team Leadership & Mentoring"
     ],

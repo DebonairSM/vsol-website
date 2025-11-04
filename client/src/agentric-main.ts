@@ -74,17 +74,38 @@ async function loadAgenticContent() {
         let logosHtml = '';
         if (service.logos && service.logos.length > 0) {
           const logoImages = service.logos.map((logo: string) => {
-            const logoMap: Record<string, { src: string, alt: string }> = {
-              'openai': { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg', alt: 'ChatGPT/OpenAI' },
-              'anthropic': { src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTYgMkwxMC41IDI4TDIxLjUgMjhMMTYgMloiIGZpbGw9IiNDQzc4NTYiLz48L3N2Zz4=', alt: 'Claude/Anthropic' },
-              'grok': { src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNCIgc3Ryb2tlPSIjMUQ5QkYwIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTIgMTJMMjAgMjBNMjAgMTJMMTIgMjAiIHN0cm9rZT0iIzFEOUJGMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=', alt: 'Grok/xAI' }
+            const logoMap: Record<string, { src: string, alt: string, style?: string }> = {
+              'openai': { 
+                // OpenAI logo - using high-quality SVG with proper branding colors
+                src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iODAiIHJ4PSIxNiIgZmlsbD0iIzEwYTM3ZiIvPjxwYXRoIGQ9Ik00Ni4yIDIyLjVDNTEuMiAyMi41IDU1LjMgMjYuMyA1Ni4zIDMxLjJDNjIuMiAzMiA2Ni43IDM3LjEgNjYuNyA0My4yQzY2LjcgNDguMyA2My41IDUyLjcgNTkgNTQuNUM1OSA2MC44IDUzLjkgNjUuOSA0Ny42IDY1LjlDNDQuMyA2NS45IDQxLjIgNjQuNiAzOC45IDYyLjNDMzQuOCA2NS42IDI5LjIgNjcuMiAyMy4zIDY1LjdDMTYuMyA2My43IDExIDU3LjkgOS40IDUwLjhDMTAgNDQuNyAxMy42IDM5LjMgMTguOCAzNi41QzE3LjYgMzEgMTkuNyAyNS41IDIzLjkgMjEuNEMyNy45IDE3LjMgMzMuNiAxNS4yIDM5LjQgMTUuNUM0MS45IDE1LjUgNDQuOCAxNi4yIDQ2LjIgMjIuNVoiIGZpbGw9IiMwMDAwMDAiLz48cGF0aCBkPSJNMzEgNDRDMzEgMzcuNCAzNi40IDMyIDQzIDMyQzQ5LjYgMzIgNTUgMzcuNCA1NSA0NEM1NSA1MC42IDQ5LjYgNTYgNDMgNTZDMzYuNCA1NiAzMSA1MC42IDMxIDQ0WiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==', 
+                alt: 'ChatGPT/OpenAI'
+              },
+              'anthropic': { 
+                // Anthropic Claude logo - distinctive A in warm tan/coral
+                src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iODAiIHJ4PSIxNiIgZmlsbD0iI0NBOTU3RSIvPjxwYXRoIGQ9Ik0yNSA2OEwzNSAxMkw0NSA2OEgyNVoiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNMzUgMTVMNDUgNjhIMzVWMTVaIiBmaWxsPSIjRkZGRkZGIiBmaWxsLW9wYWNpdHk9IjAuNjUiLz48cGF0aCBkPSJNMzUgNjhMNDUgMTJMNTUgNjhINDVaIiBmaWxsPSIjRkZGRkZGIi8+PHBhdGggZD0iTTQ1IDE1TDU1IDY4SDQ1VjE1WiIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1vcGFjaXR5PSIwLjY1Ii8+PC9zdmc+', 
+                alt: 'Claude/Anthropic'
+              },
+              'grok': { 
+                // xAI Grok logo - X design with sharp angles
+                src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iODAiIHJ4PSIxNiIgZmlsbD0iIzAwMDAwMCIvPjxwYXRoIGQ9Ik0xOCAyMkgzMEw0MCA0MEwyNSA1OEgxM0wyOCA0MEwxOCAyMloiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNNTAgMjJINjJMNTIgNDBMNjcgNThINTVMNDAgNDBMNTAgMjJaIiBmaWxsPSIjRkZGRkZGIi8+PC9zdmc+', 
+                alt: 'Grok/xAI'
+              }
             };
             const logoInfo = logoMap[logo];
-            return logoInfo ? `<img src="${logoInfo.src}" alt="${logoInfo.alt}" class="service-logo" title="${logoInfo.alt}">` : '';
+            if (!logoInfo) return '';
+            const styleAttr = logoInfo.style ? ` style="${logoInfo.style}"` : '';
+            return `<img src="${logoInfo.src}" alt="${logoInfo.alt}" class="service-logo" title="${logoInfo.alt}"${styleAttr}>`;
           }).join('');
           logosHtml = `<div class="service-logos">${logoImages}</div>`;
         } else if (service.icons && service.icons.length > 0) {
-          const iconHtml = service.icons.map((icon: string) => `<span class="service-icon">${icon}</span>`).join('');
+          const iconHtml = service.icons.map((icon: string) => {
+            // Check if it's a Material Icon name (no emoji characters)
+            if (icon.match(/^[a-z_]+$/)) {
+              return `<span class="material-icons service-material-icon">${icon}</span>`;
+            }
+            // Otherwise treat as emoji
+            return `<span class="service-icon">${icon}</span>`;
+          }).join('');
           logosHtml = `<div class="service-logos">${iconHtml}</div>`;
         }
         

@@ -12,6 +12,7 @@ export default defineConfig({
         main: path.resolve(__dirname, 'client/index.html'),
         agentric: path.resolve(__dirname, 'client/agentric.html'),
         spreadsheet: path.resolve(__dirname, 'client/spreadsheet-automation.html'),
+        secretLeads: path.resolve(__dirname, 'client/secret-leads-viewer.html'),
       },
     },
   },
