@@ -66,9 +66,18 @@ export async function leadsRoutes(app: FastifyInstance) {
           data: result[0],
         });
       } catch (error) {
-        app.log.error({ error }, 'Error creating lead');
+        // Log the full error details
+        app.log.error({ 
+          error,
+          errorMessage: error instanceof Error ? error.message : String(error),
+          errorStack: error instanceof Error ? error.stack : undefined,
+          body: request.body 
+        }, 'Error creating lead');
+        
+        // In development, return the actual error
         return reply.status(500).send({
           error: 'Failed to create lead',
+          details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : String(error)) : undefined
         });
       }
     }
@@ -85,9 +94,14 @@ export async function leadsRoutes(app: FastifyInstance) {
         data: allLeads,
       });
     } catch (error) {
-      app.log.error({ error }, 'Error fetching leads');
+      app.log.error({ 
+        error,
+        errorMessage: error instanceof Error ? error.message : String(error),
+        errorStack: error instanceof Error ? error.stack : undefined
+      }, 'Error fetching leads');
       return reply.status(500).send({
         error: 'Failed to fetch leads',
+        details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : String(error)) : undefined
       });
     }
   });
