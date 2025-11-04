@@ -70,7 +70,26 @@ async function loadAgenticContent() {
     if (servicesTitle) servicesTitle.textContent = data.services.title;
     if (servicesGrid && data.services.items) {
       servicesGrid.innerHTML = data.services.items.map((service: any) => {
+        // Build logos/icons section if they exist
+        let logosHtml = '';
+        if (service.logos && service.logos.length > 0) {
+          const logoImages = service.logos.map((logo: string) => {
+            const logoMap: Record<string, { src: string, alt: string }> = {
+              'openai': { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg', alt: 'ChatGPT/OpenAI' },
+              'anthropic': { src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTYgMkwxMC41IDI4TDIxLjUgMjhMMTYgMloiIGZpbGw9IiNDQzc4NTYiLz48L3N2Zz4=', alt: 'Claude/Anthropic' },
+              'grok': { src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNCIgc3Ryb2tlPSIjMUQ5QkYwIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTIgMTJMMjAgMjBNMjAgMTJMMTIgMjAiIHN0cm9rZT0iIzFEOUJGMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=', alt: 'Grok/xAI' }
+            };
+            const logoInfo = logoMap[logo];
+            return logoInfo ? `<img src="${logoInfo.src}" alt="${logoInfo.alt}" class="service-logo" title="${logoInfo.alt}">` : '';
+          }).join('');
+          logosHtml = `<div class="service-logos">${logoImages}</div>`;
+        } else if (service.icons && service.icons.length > 0) {
+          const iconHtml = service.icons.map((icon: string) => `<span class="service-icon">${icon}</span>`).join('');
+          logosHtml = `<div class="service-logos">${iconHtml}</div>`;
+        }
+        
         const cardContent = `
+          ${logosHtml}
           <h3 class="text-xl font-bold mb-3" style="color: #8b5cf6;">${service.title}</h3>
           <p class="text-gray-700 text-sm leading-relaxed">${service.description}</p>
         `;

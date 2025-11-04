@@ -153,6 +153,32 @@
     border: 2px solid rgba(6, 182, 212, 0.3);
   }
 
+  /* Service logos and icons */
+  .service-logos {
+    @apply flex gap-3 items-center mb-4 flex-wrap;
+  }
+
+  .service-logo {
+    @apply w-10 h-10 object-contain;
+    filter: grayscale(0%) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+  }
+
+  .card-agentric:hover .service-logo {
+    transform: scale(1.1);
+    filter: grayscale(0%) drop-shadow(0 4px 8px rgba(139, 92, 246, 0.3));
+  }
+
+  .service-icon {
+    @apply text-3xl;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+  }
+
+  .card-agentric:hover .service-icon {
+    transform: scale(1.15) rotate(5deg);
+  }
+
   /* Buttons with glow effect */
   .btn-agentric-primary {
     @apply inline-block px-8 py-4 text-white font-bold rounded-lg shadow-lg transition-all duration-300;

@@ -2,11 +2,26 @@ import { createApp } from './app.js';
 import { config } from './config/index.js';
 import { logger } from './utils/logger.js';
 import { getDatabase, closeDatabase } from './db/index.js';
+import { migrate } from 'drizzle-orm/better-sqlite3/migrator';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 async function start() {
   try {
     // Initialize database
-    getDatabase();
+    const db = getDatabase();
+    
+    // Run migrations
+    logger.info('Running database migrations...');
+    // In production, migrations are in dist/db/migrations
+    // In development, they are in src/db/migrations
+    const migrationsFolder = config.isProduction 
+      ? join(__dirname, 'db', 'migrations')
+      : './src/db/migrations';
+    migrate(db, { migrationsFolder });
+    logger.info('Migrations completed successfully');
     
     // Create and start the app
     const app = await createApp();
