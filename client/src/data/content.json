@@ -14,6 +14,10 @@
         "description": "Our consulting team in Brazil is made up of professionals fluent in English with expertise across Microsoft and open source technologies. We supplement existing software teams or operate as the sole team for companies looking to reduce their costs and receive an excellent return on their investment"
       },
       {
+        "title": "Agentric AI",
+        "description": "We combine advanced AI agents with expert human guidance to deliver software faster, smarter, and more efficiently. AI handles repetitive coding tasks, automated testing, and documentation while experienced developers guide architecture, strategy, and critical decisions. Achieve 3-5x faster delivery and up to 70% cost reduction without compromising quality."
+      },
+      {
         "title": "The VSol Difference",
         "description": "Our clients develop software for large enterprises and global institutions. Our service has a strong impact in many industries and its results affect thousands of people in different parts of the world. We are expanding quickly and we are always looking for the best professionals to work with us. See the Careers section below for more information"
       },
@@ -28,42 +32,49 @@
     "subtitle": "We are looking for the best in our field.",
     "positions": [
       {
-        "title": "Azure SQL Database Developer",
-        "description": "Excellent opportunity for a SQL Server DBA and Azure SQL Developer",
+        "title": "Node.js Software Developer",
+        "description": "We're seeking talented Node.js developers to build scalable, high-performance backend systems and APIs. Work with cutting-edge technologies including TypeScript, modern frameworks, and cloud platforms. This is a fully remote position for self-motivated professionals who thrive in a collaborative, agile environment.",
         "email": "work@vsol.software",
         "needed": [
-          "Proficiency in English to read and write technical documents, chats, e-mails and requirements",
-          "Azure SQL and MS SQL Server configuration and management",
-          "High availability",
-          "Apply data modeling techniques",
-          "Advanced knowledge of SQL Tuning",
-          "Indexes and statistics",
-          "Data security",
-          "Bachelor's degree in Computer Science of similar experience"
+          "Proficiency in English to read and write technical documents, chats, emails and requirements",
+          "Strong experience with Node.js and TypeScript",
+          "RESTful API design and development",
+          "Database design and optimization (PostgreSQL, SQL Server, or MongoDB)",
+          "Understanding of asynchronous programming and event-driven architecture",
+          "Version control with Git",
+          "Bachelor's degree in Computer Science or similar experience"
         ],
         "desirable": [
-          "Understanding of Containers Architecture and CQRS concepts",
-          "Azure SQL, Azure AI Search and data tuning"
+          "Experience with Express.js, Fastify, or NestJS",
+          "Knowledge of microservices architecture",
+          "Experience with Docker and containerization",
+          "Cloud platforms (Azure, AWS, or Render)",
+          "GraphQL and modern API patterns",
+          "Testing frameworks (Jest, Mocha, or Vitest)"
         ],
-        "bigPlus": "Experience with teams working with Scrum/Agile and Azure Cloud Architecture"
+        "bigPlus": "Experience with Scrum/Agile methodologies, CI/CD pipelines, and real-time applications (WebSockets, Server-Sent Events)"
       },
       {
         "title": "Fullstack Software Developer",
-        "description": "We are hiring developers with different levels of experience. The candidate must have medium level proficiency in English in order to read, write and understand requirements and internal project communication. If you meet this requirement and are a self-organized person who likes to work in an professional environment, like to use cutting edge technologies, you will enjoy working with us. We pay according to the level of experience demonstrated by the candidate. This position is remote, you must be comfortable working from your home office.",
+        "description": "We're hiring modern fullstack developers who are passionate about building elegant, performant web applications. Work with the latest technologies including TypeScript, React/Angular, Node.js, and cloud platforms. This fully remote position offers competitive compensation based on your experience level. If you're self-organized, love clean code, and want to work with cutting-edge tech, you'll thrive here.",
         "email": "work@vsol.software",
         "needed": [
-          "Proficiency in English to read and write technical documents, chats, email and requirements",
-          "Web development",
-          "Knowledge and ability to apply design patterns to solve problems",
-          "Bachelor's degree in Computer Science of similar experience"
+          "Proficiency in English to read and write technical documents, chats, emails and requirements",
+          "Strong web development fundamentals (HTML5, CSS3, JavaScript/TypeScript)",
+          "Experience with modern frontend frameworks (React, Angular, or Vue)",
+          "Backend development with Node.js or ASP.NET Core",
+          "Knowledge and ability to apply design patterns and best practices",
+          "Bachelor's degree in Computer Science or similar experience"
         ],
         "desirable": [
-          "Experience in ASP.NET Core, C#, JavaScript and Typescript",
-          "Experience in MS SQL Server, Azure Copilot and Azure APIM",
-          "Knowledge of Kendo UI or any other MVVM framework",
-          "Knowledge of Entity Framework Core"
+          "Experience with React or Angular and TypeScript",
+          "Backend experience with Node.js, Express, or ASP.NET Core",
+          "Database design with PostgreSQL, SQL Server, or MongoDB",
+          "RESTful API development and integration",
+          "State management libraries (Redux, Zustand, or NgRx)",
+          "Modern CSS frameworks (Tailwind CSS, Material UI, or Bootstrap)"
         ],
-        "bigPlus": "Experience with Scrum/Agile, Azure Services, Angular, Bootstrap, Autofac (DI) and Xamarin Mobile or Flutter"
+        "bigPlus": "Experience with Scrum/Agile, cloud services (Azure, AWS, Render), Docker, CI/CD pipelines, and automated testing (Jest, Vitest, Playwright)"
       }
     ]
   },
@@ -73,26 +84,22 @@
     "items": [
       {
         "title": "The Developers Conference",
-        "description": "With teams distributed throught Brazil, we attend events together in Florianopolis, Sao Paulo, and beyond.",
-        "date": "04/24/2019",
+        "description": "With teams distributed throughout Brazil, we attend events together in Florianopolis, Sao Paulo, and beyond.",
         "image": "/images/tdc2019.jpg"
       },
       {
         "title": "Coworking",
         "description": "We take advantage of our periodical coworking events to catch up and share crucial knowledge about our work.",
-        "date": "12/03/2018",
         "image": "/images/VSol Coworking Dec 3 '18.jpeg"
       },
       {
-        "title": "Christmas Party 2015",
-        "description": "For, more than just a day, Christmas is a state of mind. It is found throughout the year whenever faith overcomes doubt, hope conquers despair, and love triumphs over hate. It is present when men of any creed bring love and understanding to the hearts of their fellow man. -Ronald Reagan",
-        "date": "Our Christmas Party was held on 12/12/2015 and we had a great time with family and friends, enjoying secret santa and good food.",
+        "title": "Christmas Party",
+        "description": "For, more than just a day, Christmas is a state of mind. It is found throughout the year whenever faith overcomes doubt, hope conquers despair, and love triumphs over hate. It is present when men of any creed bring love and understanding to the hearts of their fellow man. We had a great time with family and friends, enjoying secret santa and good food.",
         "image": "/images/christmas_party_vsol.jpg"
       },
       {
-        "title": "paint·ball",
-        "description": "Paintball is a game developed in the 1980s in which players eliminate opponents from play by hitting them with dye-filled, breakable, oil and gelatin paintballs, or pellets, usually shot from a carbon dioxide or compressed air (Nitrogen) powered paintball marker",
-        "date": "Our paintball event was held on 09/15/2015 and we had fun with family and friends",
+        "title": "Paintball",
+        "description": "Paintball is a game developed in the 1980s in which players eliminate opponents from play by hitting them with dye-filled, breakable, oil and gelatin paintballs, or pellets, usually shot from a carbon dioxide or compressed air (Nitrogen) powered paintball marker. We had fun with family and friends at this exciting event.",
         "image": "/images/paintball_vsol.png"
       }
     ]
@@ -100,11 +107,13 @@
   "contact": {
     "title": "Headquarters",
     "subtitle": "Virtually Collocated Offices",
-    "location": "VSol is based in Coral Springs, Florida and we are virtually collocated. That just means we work from the comfort of our home offices employing the best collaboration tools to work smarter",
+    "location": "VSol is based in Coral Springs, Florida with an additional presence in Spring Lake, FL off of I-75 South. We are virtually collocated, which means we work from the comfort of our home offices employing the best collaboration tools to work smarter",
     "address": "3111 N University Dr. Ste 105 - Coral Springs, FL 33065",
+    "additionalLocation": "Spring Lake, FL - off I-75 South",
     "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.773881367396!2d-80.25157098496858!3d26.269001183409045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d90536b64e8039%3A0xcdd1c71ce1c6ec70!2s3111+N+University+Dr+%23105%2C+Coral+Springs%2C+FL+33065%2C+USA!5e0!3m2!1sen!2sbr!4v1558192106859!5m2!1sen!2sbr",
     "email": "info@vsol.software",
-    "phone": "+1 (352) 397-8650"
+    "phone": "+1 (352) 397-8650",
+    "calendlyUrl": "https://calendly.com/vsol/meeting-with-bandeira"
   }
 }
 

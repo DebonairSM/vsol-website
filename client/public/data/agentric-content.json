@@ -108,7 +108,9 @@
     "title": "Ready to Accelerate Your Development?",
     "description": "Discover how Agentric AI can transform your next project. Get faster delivery, lower costs, and higher quality.",
     "buttonText": "Start a Conversation",
-    "email": "rommel@vsol.software"
+    "email": "rommel@vsol.software",
+    "calendlyUrl": "https://calendly.com/vsol/meeting-with-bandeira",
+    "calendlyText": "Book a Meeting with Rommel"
   }
 }
 

@@ -33,7 +33,6 @@ export interface ContentData {
     items: Array<{
       title: string;
       description: string;
-      date: string;
       image: string;
     }>;
   };
@@ -42,9 +41,11 @@ export interface ContentData {
     subtitle: string;
     location: string;
     address: string;
+    additionalLocation?: string;
     mapUrl: string;
     email: string;
     phone: string;
+    calendlyUrl?: string;
   };
 }
 
@@ -109,7 +110,7 @@ function loadServices(services: ContentData['services']) {
         </div>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         ${services.items
           .map(
             (item) => `
@@ -203,8 +204,7 @@ function loadEvents(events: ContentData['events']) {
                 </div>
                 <div class="p-8">
                   <h3 class="text-3xl font-bold mb-4 text-primary-600">${event.title}</h3>
-                  <p class="text-gray-700 mb-4 text-lg">${event.description}</p>
-                  <p class="text-sm text-gray-500">${event.date}</p>
+                  <p class="text-gray-700 text-lg">${event.description}</p>
                 </div>
               </div>
             </div>
@@ -239,8 +239,8 @@ function loadContact(contact: ContentData['contact']) {
   if (!section) return;
 
   const html = `
-    <div class="max-w-6xl mx-auto">
-      <div class="flex mb-12">
+    <div class="contact-content-wrapper">
+      <div class="flex mb-8">
         <div class="w-2 bg-accent-500 mr-6 flex-shrink-0"></div>
         <div>
           <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 uppercase">${contact.title}</h2>
@@ -252,9 +252,18 @@ function loadContact(contact: ContentData['contact']) {
         <div>
           <h3 class="text-2xl font-bold mb-4">Location</h3>
           <p class="mb-4">${contact.location}</p>
-          <a href="https://goo.gl/maps/3ei5xN3knPN2" target="_blank" class="text-accent-500 hover:underline">
-            ${contact.address}
-          </a>
+          <div class="mb-4">
+            <p class="font-semibold mb-2">Headquarters:</p>
+            <a href="https://goo.gl/maps/3ei5xN3knPN2" target="_blank" class="text-accent-500 hover:underline">
+              ${contact.address}
+            </a>
+          </div>
+          ${contact.additionalLocation ? `
+          <div class="mb-4">
+            <p class="font-semibold mb-2">Additional Presence:</p>
+            <p class="text-gray-200">${contact.additionalLocation}</p>
+          </div>
+          ` : ''}
           <div class="mt-6">
             <iframe 
               src="${contact.mapUrl}" 
@@ -276,6 +285,14 @@ function loadContact(contact: ContentData['contact']) {
           <p class="mb-6">
             Phone: ${contact.phone}
           </p>
+          
+          ${contact.calendlyUrl ? `
+          <button id="open-booking-modal" class="inline-flex items-center gap-2 bg-accent-500 text-white px-6 py-3 rounded-lg hover:bg-accent-600 transition-colors mb-4 font-semibold cursor-pointer">
+            <span class="material-icons">calendar_month</span>
+            Book a Meeting with Rommel
+          </button>
+          <br>
+          ` : ''}
           
           <a href="https://www.linkedin.com/company/vsol/" target="_blank" class="btn-primary">
             Find us on LinkedIn

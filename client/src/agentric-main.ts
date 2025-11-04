@@ -159,12 +159,19 @@ async function loadAgenticContent() {
     const ctaTitle = document.getElementById('cta-title');
     const ctaDescription = document.getElementById('cta-description');
     const ctaButton = document.getElementById('cta-button');
+    const ctaCalendlyButton = document.getElementById('cta-calendly-button');
     
     if (ctaTitle) ctaTitle.textContent = data.cta.title;
     if (ctaDescription) ctaDescription.textContent = data.cta.description;
     if (ctaButton) {
       ctaButton.textContent = data.cta.buttonText;
       ctaButton.setAttribute('href', `mailto:${data.cta.email}`);
+    }
+    if (ctaCalendlyButton && data.cta.calendlyUrl) {
+      if (data.cta.calendlyText) {
+        ctaCalendlyButton.textContent = `📅 ${data.cta.calendlyText}`;
+      }
+      ctaCalendlyButton.setAttribute('href', data.cta.calendlyUrl);
     }
 
     console.log('Agentric content loaded successfully');

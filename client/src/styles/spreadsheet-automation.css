@@ -343,7 +343,7 @@ body {
 .transform-arrow {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     width: 60px;
     height: 60px;
@@ -355,6 +355,7 @@ body {
     box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
     background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
     color: white;
+    z-index: 10;
 }
 
 /* Pain Points Section */
