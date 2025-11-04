@@ -18,7 +18,7 @@ npm run dev
 ```
 
 This command starts:
-- Backend server on `http://localhost:3000`
+- Backend server on `http://localhost:8080`
 - Frontend dev server on `http://localhost:5173`
 
 ### 3. Open in Browser
@@ -79,7 +79,7 @@ npm run format           # Format code
 
 ### Port Already in Use
 
-If port 3000 or 5173 is in use, update the `PORT` in `.env` or the Vite port in `vite.config.ts`.
+If port 8080 or 5173 is in use, update the `PORT` in `.env` or the Vite port in `vite.config.ts`.
 
 ### Database Errors
 

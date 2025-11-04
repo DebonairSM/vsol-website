@@ -43,12 +43,23 @@ async function loadAgenticContent() {
     
     if (servicesTitle) servicesTitle.textContent = data.services.title;
     if (servicesGrid && data.services.items) {
-      servicesGrid.innerHTML = data.services.items.map((service: any) => `
-        <div class="card-agentric">
+      servicesGrid.innerHTML = data.services.items.map((service: any) => {
+        const cardContent = `
           <h3 class="text-xl font-bold mb-3" style="color: #8b5cf6;">${service.title}</h3>
           <p class="text-gray-700 text-sm leading-relaxed">${service.description}</p>
-        </div>
-      `).join('');
+        `;
+        
+        if (service.link) {
+          return `
+            <a href="${service.link}" class="card-agentric card-agentric-link" onclick="window.location.href='${service.link}'; return false;">
+              ${cardContent}
+              <div class="mt-4 text-cyan-600 font-medium text-sm">Learn More →</div>
+            </a>
+          `;
+        } else {
+          return `<div class="card-agentric">${cardContent}</div>`;
+        }
+      }).join('');
     }
 
     // Populate Agent Master profile section

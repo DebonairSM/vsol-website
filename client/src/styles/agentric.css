@@ -105,6 +105,17 @@
     box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
   }
 
+  /* Clickable service cards */
+  .card-agentric-link {
+    @apply block no-underline;
+    cursor: pointer;
+  }
+
+  .card-agentric-link:hover {
+    border-color: #06b6d4;
+    box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+  }
+
   /* Benefit cards with icons */
   .benefit-card {
     @apply bg-gradient-to-br from-white to-gray-50 rounded-lg p-8 border-2 border-gray-200 transition-all duration-300;

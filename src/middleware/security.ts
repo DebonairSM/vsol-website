@@ -18,6 +18,7 @@ export async function registerSecurityPlugins(app: FastifyInstance) {
         fontSrc: ["'self'", 'https://fonts.gstatic.com'],
         imgSrc: ["'self'", 'data:', 'https:'],
         scriptSrc: ["'self'", "'unsafe-inline'"],
+        frameSrc: ["'self'", 'https://www.google.com', 'https://docs.google.com'],
       },
     },
   });

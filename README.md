@@ -60,8 +60,8 @@ npm run dev
 ```
 
 This will:
-- Start the Fastify server on `http://localhost:3000`
-- Start the Vite dev server on `http://localhost:5173` (proxies API requests to :3000)
+- Start the Fastify server on `http://localhost:8080`
+- Start the Vite dev server on `http://localhost:5173` (proxies API requests to :8080)
 
 Open your browser to `http://localhost:5173` to see the site.
 
@@ -83,7 +83,7 @@ This creates:
 npm start
 ```
 
-Server runs on `http://localhost:3000` (or your configured PORT)
+Server runs on `http://localhost:8080` (or your configured PORT)
 
 ## Available Scripts
 
@@ -161,7 +161,7 @@ npm run db:studio
 | Variable | Description | Default |
 |----------|-------------|---------|
 | NODE_ENV | Environment (development/production/test) | development |
-| PORT | Server port | 3000 |
+| PORT | Server port | 8080 |
 | HOST | Server host | 0.0.0.0 |
 | DATABASE_URL | SQLite database path | ./data/vsol.db |
 | LOG_LEVEL | Logging level (trace/debug/info/warn/error/fatal) | info |
