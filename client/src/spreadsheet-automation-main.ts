@@ -434,8 +434,13 @@ function debounce(func, wait) {
 window.addEventListener('load', () => {
     if (window.performance && window.performance.timing) {
         const perfData = window.performance.timing;
-        const loadTime = perfData.loadEventEnd - perfData.navigationStart;
-        console.log(`Page load time: ${loadTime}ms`);
+        // Wait a bit to ensure loadEventEnd is set
+        setTimeout(() => {
+            const loadTime = perfData.loadEventEnd - perfData.navigationStart;
+            if (loadTime > 0 && loadTime < 60000) { // Valid time between 0 and 60 seconds
+                console.log(`Page load time: ${loadTime}ms`);
+            }
+        }, 0);
     }
 });
 

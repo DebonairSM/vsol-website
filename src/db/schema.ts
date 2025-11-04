@@ -50,10 +50,28 @@ export const settings = sqliteTable('settings', {
     .notNull(),
 });
 
+/**
+ * Leads table - for spreadsheet automation form submissions
+ */
+export const leads = sqliteTable('leads', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  name: text('name').notNull(),
+  email: text('email').notNull(),
+  company: text('company'),
+  description: text('description'),
+  formType: text('form_type').notNull(), // 'scan' or 'challenge'
+  status: text('status').default('new').notNull(), // 'new', 'contacted', 'converted'
+  createdAt: integer('created_at', { mode: 'timestamp' })
+    .default(sql`(unixepoch())`)
+    .notNull(),
+});
+
 export type Content = typeof content.$inferSelect;
 export type NewContent = typeof content.$inferInsert;
 export type ContactSubmission = typeof contactSubmissions.$inferSelect;
 export type NewContactSubmission = typeof contactSubmissions.$inferInsert;
 export type Setting = typeof settings.$inferSelect;
 export type NewSetting = typeof settings.$inferInsert;
+export type Lead = typeof leads.$inferSelect;
+export type NewLead = typeof leads.$inferInsert;
 

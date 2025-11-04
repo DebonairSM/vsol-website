@@ -1,9 +1,13 @@
 import type { FastifyInstance } from 'fastify';
 import { healthRoutes } from './api/health.js';
+import { leadsRoutes } from './api/leads.js';
 
 export async function registerRoutes(app: FastifyInstance) {
   // Health check route
   await app.register(healthRoutes, { prefix: '/api' });
+  
+  // Leads route (for spreadsheet automation forms)
+  await app.register(leadsRoutes, { prefix: '/api' });
 
   // API routes will be added here as the application grows
   // Example structure:
