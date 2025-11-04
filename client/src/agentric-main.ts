@@ -31,8 +31,8 @@ async function loadAgenticContent() {
     if (benefitsGrid && data.benefits) {
       benefitsGrid.innerHTML = data.benefits.map((benefit: any) => `
         <div class="benefit-card">
-          <h3 class="text-2xl font-bold mb-4" style="color: #06b6d4;">${benefit.title}</h3>
-          <p class="text-gray-300 leading-relaxed">${benefit.description}</p>
+          <h3 class="text-2xl font-bold mb-4" style="color: #0369a1;">${benefit.title}</h3>
+          <p class="text-gray-700 leading-relaxed">${benefit.description}</p>
         </div>
       `).join('');
     }
@@ -46,7 +46,7 @@ async function loadAgenticContent() {
       servicesGrid.innerHTML = data.services.items.map((service: any) => `
         <div class="card-agentric">
           <h3 class="text-xl font-bold mb-3" style="color: #8b5cf6;">${service.title}</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">${service.description}</p>
+          <p class="text-gray-700 text-sm leading-relaxed">${service.description}</p>
         </div>
       `).join('');
     }

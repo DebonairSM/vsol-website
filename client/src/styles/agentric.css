@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-gray-900 text-gray-100;
+    @apply bg-white text-gray-900;
   }
 }
 
@@ -25,9 +25,9 @@
     transition: color 0.3s ease;
   }
 
-  /* Agentric Hero - AI-themed gradient with electric colors */
+  /* Agentric Hero - Light theme with subtle gradients */
   .agentric-hero {
-    background: linear-gradient(135deg, #0a0e1f 0%, #1a1333 25%, #0f0d2e 50%, #1e1447 75%, #0d0b29 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 25%, #dbeafe 50%, #e0f2fe 75%, #f0f9ff 100%);
     position: relative;
     overflow: hidden;
   }
@@ -40,15 +40,15 @@
     right: 0;
     bottom: 0;
     background: 
-      radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 60%);
+      radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 60%);
     animation: pulse-glow 8s ease-in-out infinite;
   }
 
   @keyframes pulse-glow {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 0.8; }
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
   }
 
   .agentric-hero::after {
@@ -59,20 +59,20 @@
     right: 0;
     bottom: 0;
     background-image: 
-      linear-gradient(90deg, rgba(139, 92, 246, 0.04) 1px, transparent 1px),
-      linear-gradient(rgba(6, 182, 212, 0.04) 1px, transparent 1px);
+      linear-gradient(90deg, rgba(139, 92, 246, 0.02) 1px, transparent 1px),
+      linear-gradient(rgba(6, 182, 212, 0.02) 1px, transparent 1px);
     background-size: 50px 50px;
-    opacity: 0.4;
+    opacity: 0.5;
   }
 
   /* Hero content with glass effect */
   .hero-content-agentric {
-    background: rgba(15, 12, 42, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    border: 2px solid rgba(139, 92, 246, 0.2);
     border-radius: 1rem;
     padding: 3rem 2rem;
-    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2), 0 0 60px rgba(6, 182, 212, 0.1);
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15), 0 4px 20px rgba(6, 182, 212, 0.1);
   }
 
   @media (min-width: 768px) {
@@ -81,38 +81,38 @@
     }
   }
 
-  /* Section styling for dark theme */
+  /* Section styling for light theme */
   .section-dark {
-    @apply bg-gray-900;
+    @apply bg-gray-50;
   }
 
   .section-darker {
-    @apply bg-gray-950;
+    @apply bg-white;
   }
 
   .section-gradient {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   }
 
-  /* Cards with modern dark styling */
+  /* Cards with modern light styling */
   .card-agentric {
-    @apply bg-gray-800 rounded-lg shadow-xl p-6 transition-all duration-300 border border-gray-700;
+    @apply bg-white rounded-lg shadow-lg p-6 transition-all duration-300 border-2 border-gray-200;
   }
 
   .card-agentric:hover {
     @apply transform -translate-y-1 shadow-2xl;
     border-color: #8b5cf6;
-    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
   }
 
   /* Benefit cards with icons */
   .benefit-card {
-    @apply bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-8 border border-gray-700 transition-all duration-300;
+    @apply bg-gradient-to-br from-white to-gray-50 rounded-lg p-8 border-2 border-gray-200 transition-all duration-300;
   }
 
   .benefit-card:hover {
     border-color: #06b6d4;
-    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
   }
 
   /* Profile section styling */
@@ -125,9 +125,9 @@
   }
 
   .profile-image {
-    @apply rounded-lg shadow-2xl w-64 h-64 object-cover border-4;
+    @apply rounded-lg shadow-xl w-64 h-64 object-cover border-4;
     border-color: #8b5cf6;
-    box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
   }
 
   .profile-content {
@@ -137,9 +137,9 @@
   /* Expertise tags */
   .expertise-tag {
     @apply inline-block px-4 py-2 rounded-full text-sm font-medium mr-2 mb-2;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.2));
-    color: #06b6d4;
-    border: 1px solid rgba(6, 182, 212, 0.4);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(6, 182, 212, 0.12));
+    color: #0369a1;
+    border: 2px solid rgba(6, 182, 212, 0.3);
   }
 
   /* Buttons with glow effect */
@@ -154,13 +154,14 @@
   }
 
   .btn-agentric-secondary {
-    @apply inline-block px-8 py-4 bg-gray-800 text-gray-100 font-semibold rounded-lg shadow-md transition-all duration-300;
-    border: 2px solid #06b6d4;
+    @apply inline-block px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg shadow-md transition-all duration-300;
+    border: 2px solid #8b5cf6;
   }
 
   .btn-agentric-secondary:hover {
-    background-color: rgba(6, 182, 212, 0.1);
-    border-color: #8b5cf6;
+    background-color: rgba(139, 92, 246, 0.05);
+    border-color: #06b6d4;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
   }
 
   /* Section headers */
@@ -172,7 +173,7 @@
   }
 
   .section-subheader-agentric {
-    @apply text-xl md:text-2xl text-gray-400 mb-8;
+    @apply text-xl md:text-2xl text-gray-600 mb-8;
     line-height: 1.4;
   }
 
@@ -184,13 +185,13 @@
 
   /* Quote styling */
   .quote-box {
-    @apply pl-6 italic text-gray-300 text-lg bg-gray-800 bg-opacity-50 p-6 rounded-r-lg;
+    @apply pl-6 italic text-gray-700 text-lg bg-gray-50 p-6 rounded-r-lg;
     border-left: 4px solid #8b5cf6;
   }
 
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #f8fafc 100%);
     position: relative;
   }
 
@@ -201,7 +202,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
   }
 }
 
@@ -259,13 +260,13 @@
   }
 }
 
-/* Custom scrollbar for dark theme */
+/* Custom scrollbar for light theme */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-900;
+  @apply bg-gray-100;
 }
 
 ::-webkit-scrollbar-thumb {
