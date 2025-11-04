@@ -8,6 +8,19 @@
     "title": "The Future of Software Development",
     "content": "Agentric Software Development represents a fundamental shift in how software is built. By leveraging AI agents for routine tasks, code generation, and testing while maintaining human oversight for architecture, strategy, and critical decisions, we achieve unprecedented speed and quality. This approach allows us to deliver enterprise-grade solutions at a fraction of traditional costs and timelines."
   },
+  "featuredProduct": {
+    "badge": "NEW OFFERING",
+    "title": "Spreadsheet Automation Platform",
+    "description": "Transform manual spreadsheet workflows into automated systems with AI-generated interactive mockups delivered during discovery calls. We analyze your current processes, design streamlined solutions, and provide working demonstrations same-day. Complete with workflow documentation, ROI analysis, and deployment-ready prototypes.",
+    "features": [
+      "AI-generated interactive mockups delivered during discovery calls",
+      "Same-day working demonstrations",
+      "Complete workflow documentation and ROI analysis",
+      "Deployment-ready prototypes"
+    ],
+    "link": "/spreadsheet-automation.html",
+    "buttonText": "Explore Platform"
+  },
   "benefits": [
     {
       "title": "Accelerated Delivery",

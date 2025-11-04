@@ -26,6 +26,32 @@ async function loadAgenticContent() {
       introContent.innerHTML = `<p>${data.introduction.content}</p>`;
     }
 
+    // Populate featured product section
+    if (data.featuredProduct) {
+      const featuredBadge = document.getElementById('featured-badge');
+      const featuredTitle = document.getElementById('featured-title');
+      const featuredDescription = document.getElementById('featured-description');
+      const featuredFeatures = document.getElementById('featured-features');
+      const featuredButton = document.getElementById('featured-button');
+
+      if (featuredBadge) featuredBadge.textContent = data.featuredProduct.badge;
+      if (featuredTitle) featuredTitle.textContent = data.featuredProduct.title;
+      if (featuredDescription) featuredDescription.textContent = data.featuredProduct.description;
+      
+      if (featuredFeatures && data.featuredProduct.features) {
+        featuredFeatures.innerHTML = data.featuredProduct.features.map((feature: string) => `
+          <div class="feature-item">
+            <span class="text-lg">${feature}</span>
+          </div>
+        `).join('');
+      }
+
+      if (featuredButton) {
+        featuredButton.textContent = data.featuredProduct.buttonText || 'Learn More';
+        featuredButton.setAttribute('href', data.featuredProduct.link);
+      }
+    }
+
     // Populate benefits section
     const benefitsGrid = document.getElementById('benefits-grid');
     if (benefitsGrid && data.benefits) {
