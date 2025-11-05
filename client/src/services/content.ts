@@ -71,7 +71,12 @@ export async function loadContent() {
 function loadHero(hero: ContentData['hero']) {
   const descElement = document.getElementById('hero-description');
   if (descElement) {
-    descElement.textContent = hero.description;
+    // Replace "software planning and execution" with styled version
+    const styledDescription = hero.description.replace(
+      /software planning and execution/gi,
+      '<span class="software-phrase"><span class="software-word">software</span> <span class="planning-execution">planning and execution</span></span>'
+    );
+    descElement.innerHTML = styledDescription;
   }
 }
 
