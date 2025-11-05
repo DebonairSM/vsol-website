@@ -166,6 +166,37 @@ body {
   display: block;
 }
 
+.field-note {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Section Divider */
+.section-divider {
+  display: flex;
+  align-items: center;
+  margin: 32px 0 24px 0;
+  text-align: center;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid var(--gray-300);
+}
+
+.divider-text {
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 /* Submit Button */
 .submit-button {
   width: 100%;

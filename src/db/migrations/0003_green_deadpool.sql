@@ -1,0 +1,1 @@
+ALTER TABLE `referrals` ADD `referrer_email` text NOT NULL;

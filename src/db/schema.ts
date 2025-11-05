@@ -73,6 +73,7 @@ export const referrals = sqliteTable('referrals', {
   id: integer('id').primaryKey({ autoIncrement: true }),
   referrerFirstName: text('referrer_first_name').notNull(),
   referrerLastName: text('referrer_last_name').notNull(),
+  referrerEmail: text('referrer_email').notNull(),
   referralLinkedinUrl: text('referral_linkedin_url').notNull(),
   referralEmail: text('referral_email').notNull(),
   referralPhone: text('referral_phone'),

@@ -220,12 +220,14 @@ async function handleSubmit(event: Event, referrerInfo: ReferrerInfo | null) {
   hideMessages();
   
   // Clear previous errors
+  clearFieldError('referrerEmail');
   clearFieldError('linkedinUrl');
   clearFieldError('email');
   
   const form = event.target as HTMLFormElement;
   const formData = new FormData(form);
   
+  const referrerEmail = (formData.get('referrerEmail') as string).trim();
   const linkedinUrl = (formData.get('linkedinUrl') as string).trim();
   const email = (formData.get('email') as string).trim();
   const phone = (formData.get('phone') as string).trim();
@@ -234,6 +236,14 @@ async function handleSubmit(event: Event, referrerInfo: ReferrerInfo | null) {
   
   // Validation
   let hasError = false;
+  
+  if (!referrerEmail) {
+    showFieldError('referrerEmail', 'Please enter your email address');
+    hasError = true;
+  } else if (!validateEmail(referrerEmail)) {
+    showFieldError('referrerEmail', 'Please enter a valid email address');
+    hasError = true;
+  }
   
   if (!linkedinUrl) {
     showFieldError('linkedinUrl', 'Please enter a LinkedIn profile URL');
@@ -265,6 +275,7 @@ async function handleSubmit(event: Event, referrerInfo: ReferrerInfo | null) {
   const requestBody = {
     referrerFirstName: referrerInfo.firstName,
     referrerLastName: referrerInfo.lastName,
+    referrerEmail,
     linkedinUrl,
     email,
     phone: phone ? cleanPhone(phone) : undefined,
@@ -330,6 +341,24 @@ function init() {
   }
   
   // Add input event listeners for real-time validation feedback
+  const referrerEmailInput = document.getElementById('referrerEmail') as HTMLInputElement;
+  if (referrerEmailInput) {
+    referrerEmailInput.addEventListener('blur', () => {
+      const value = referrerEmailInput.value.trim();
+      if (value && !validateEmail(value)) {
+        showFieldError('referrerEmail', 'Please enter a valid email address');
+      } else {
+        clearFieldError('referrerEmail');
+      }
+    });
+    
+    referrerEmailInput.addEventListener('input', () => {
+      if (referrerEmailInput.classList.contains('error')) {
+        clearFieldError('referrerEmail');
+      }
+    });
+  }
+  
   const linkedinInput = document.getElementById('linkedinUrl') as HTMLInputElement;
   if (linkedinInput) {
     linkedinInput.addEventListener('blur', () => {

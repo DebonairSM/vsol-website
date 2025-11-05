@@ -17,7 +17,8 @@ export function initializeSendGrid() {
 interface ReferralConfirmationData {
   referrerFirstName: string;
   referrerLastName: string;
-  referralEmail: string;
+  referrerEmail: string;
+  referredEmail: string;
 }
 
 interface ReferralNotificationData {
@@ -39,10 +40,10 @@ export async function sendReferralConfirmation(
   }
 
   const msg = {
-    to: data.referralEmail,
+    to: data.referrerEmail,
     from: config.email.adminEmail,
     subject: 'Thank you for your referral to VSol Software',
-    text: `Dear ${data.referrerFirstName} ${data.referrerLastName},\n\nThank you for submitting a referral to VSol Software!\n\nWe've received your submission and will reach out to ${data.referralEmail} soon.\n\nWe appreciate you helping us connect with potential clients.\n\nBest regards,\nThe VSol Software Team\n\nwww.vsol.software\n(352) 397-8650`,
+    text: `Dear ${data.referrerFirstName} ${data.referrerLastName},\n\nThank you for submitting a referral to VSol Software!\n\nWe've received your submission and will reach out to ${data.referredEmail} soon.\n\nWe appreciate you helping us connect with potential clients.\n\nBest regards,\nThe VSol Software Team\n\nwww.vsol.software\n(352) 397-8650`,
     html: `
       <!DOCTYPE html>
       <html>
@@ -64,7 +65,7 @@ export async function sendReferralConfirmation(
           <div class="content">
             <p>Dear ${data.referrerFirstName} ${data.referrerLastName},</p>
             <p>Thank you for submitting a referral to VSol Software!</p>
-            <p>We've received your submission and will reach out to <strong>${data.referralEmail}</strong> soon.</p>
+            <p>We've received your submission and will reach out to <strong>${data.referredEmail}</strong> soon.</p>
             <p>We appreciate you helping us connect with potential clients.</p>
             <p>Best regards,<br>The VSol Software Team</p>
           </div>
@@ -79,10 +80,10 @@ export async function sendReferralConfirmation(
 
   try {
     await sgMail.send(msg);
-    logger?.info({ to: data.referralEmail }, 'Referral confirmation email sent');
+    logger?.info({ to: data.referrerEmail }, 'Referral confirmation email sent to referrer');
     return true;
   } catch (error) {
-    logger?.error({ error, to: data.referralEmail }, 'Failed to send referral confirmation email');
+    logger?.error({ error, to: data.referrerEmail }, 'Failed to send referral confirmation email');
     return false;
   }
 }
