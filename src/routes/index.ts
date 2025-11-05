@@ -18,7 +18,24 @@ export async function registerRoutes(app: FastifyInstance) {
   // await app.register(contentRoutes, { prefix: '/api/content' });
   // await app.register(contactRoutes, { prefix: '/api/contact' });
 
-  // Explicit routes for HTML pages
+  // Redirect .html URLs to clean URLs
+  app.get('/referral.html', async (_request, reply) => {
+    return reply.redirect(301, '/referral');
+  });
+  
+  app.get('/agentic.html', async (_request, reply) => {
+    return reply.redirect(301, '/agentic');
+  });
+  
+  app.get('/spreadsheet-automation.html', async (_request, reply) => {
+    return reply.redirect(301, '/spreadsheet-automation');
+  });
+  
+  app.get('/secret-leads-viewer.html', async (_request, reply) => {
+    return reply.redirect(301, '/secret-leads-viewer');
+  });
+
+  // Clean URL routes for HTML pages
   app.get('/referral', async (_request, reply) => {
     return reply.sendFile('referral.html');
   });

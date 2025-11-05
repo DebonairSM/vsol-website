@@ -1,6 +1,8 @@
 import './styles/agentic.css';
 import { initNavigation } from './components/navigation';
 import { initSmoothScroll } from './utils/smooth-scroll';
+import { initCookieBanner } from './components/cookie-banner';
+import { loadGoogleAnalytics } from './utils/cookie-consent';
 
 // Load agentic page content
 async function loadAgenticContent() {
@@ -188,6 +190,13 @@ async function init() {
     if (yearElement) {
       yearElement.textContent = new Date().getFullYear().toString();
     }
+
+    // Initialize cookie consent banner
+    initCookieBanner();
+
+    // Load Google Analytics if consent is given
+    // Replace 'G-XXXXXXXXXX' with your actual Google Analytics measurement ID
+    loadGoogleAnalytics('G-XXXXXXXXXX');
 
     // Initialize navigation
     initNavigation();

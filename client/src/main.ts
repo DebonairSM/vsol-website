@@ -3,6 +3,8 @@ import { initNavigation } from './components/navigation';
 import { loadContent } from './services/content';
 import { initSmoothScroll } from './utils/smooth-scroll';
 import { Carousel } from './components/carousel';
+import { initCookieBanner } from './components/cookie-banner';
+import { loadGoogleAnalytics } from './utils/cookie-consent';
 
 // Initialize booking modal
 function initBookingModal() {
@@ -60,6 +62,13 @@ async function init() {
     if (yearElement) {
       yearElement.textContent = new Date().getFullYear().toString();
     }
+
+    // Initialize cookie consent banner
+    initCookieBanner();
+
+    // Load Google Analytics if consent is given
+    // Replace 'G-XXXXXXXXXX' with your actual Google Analytics measurement ID
+    loadGoogleAnalytics('G-XXXXXXXXXX');
 
     // Initialize navigation
     initNavigation();
