@@ -18,6 +18,23 @@ export async function registerRoutes(app: FastifyInstance) {
   // await app.register(contentRoutes, { prefix: '/api/content' });
   // await app.register(contactRoutes, { prefix: '/api/contact' });
 
+  // Explicit routes for HTML pages
+  app.get('/referral', async (_request, reply) => {
+    return reply.sendFile('referral.html');
+  });
+  
+  app.get('/agentic', async (_request, reply) => {
+    return reply.sendFile('agentic.html');
+  });
+  
+  app.get('/spreadsheet-automation', async (_request, reply) => {
+    return reply.sendFile('spreadsheet-automation.html');
+  });
+  
+  app.get('/secret-leads-viewer', async (_request, reply) => {
+    return reply.sendFile('secret-leads-viewer.html');
+  });
+
   // Catch-all route for SPA - serve index.html for any non-API route
   app.setNotFoundHandler((request, reply) => {
     if (request.url.startsWith('/api')) {
