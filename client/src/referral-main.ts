@@ -229,6 +229,7 @@ async function handleSubmit(event: Event, referrerInfo: ReferrerInfo | null) {
   const linkedinUrl = (formData.get('linkedinUrl') as string).trim();
   const email = (formData.get('email') as string).trim();
   const phone = (formData.get('phone') as string).trim();
+  const about = (formData.get('about') as string).trim();
   const website = formData.get('website') as string; // Honeypot
   
   // Validation
@@ -267,6 +268,7 @@ async function handleSubmit(event: Event, referrerInfo: ReferrerInfo | null) {
     linkedinUrl,
     email,
     phone: phone ? cleanPhone(phone) : undefined,
+    about: about || undefined,
     website, // Include honeypot field
   };
   
@@ -360,6 +362,20 @@ function init() {
     emailInput.addEventListener('input', () => {
       if (emailInput.classList.contains('error')) {
         clearFieldError('email');
+      }
+    });
+  }
+  
+  // Add event listener for "Add Another Referral" button
+  const addAnotherBtn = document.getElementById('addAnotherBtn');
+  if (addAnotherBtn) {
+    addAnotherBtn.addEventListener('click', () => {
+      hideMessages();
+      clearForm();
+      // Scroll to top of form
+      const formContainer = document.querySelector('.form-container');
+      if (formContainer) {
+        formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   }

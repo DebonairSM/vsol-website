@@ -26,6 +26,7 @@ interface ReferralNotificationData {
   referralLinkedinUrl: string;
   referralEmail: string;
   referralPhone?: string;
+  referralAbout?: string;
 }
 
 export async function sendReferralConfirmation(
@@ -99,7 +100,7 @@ export async function sendReferralNotification(
     to: config.email.adminEmail,
     from: config.email.adminEmail,
     subject: `New Referral from ${data.referrerFirstName} ${data.referrerLastName}`,
-    text: `New referral submission received!\n\nReferrer: ${data.referrerFirstName} ${data.referrerLastName}\n\nReferral Details:\n- LinkedIn: ${data.referralLinkedinUrl}\n- Email: ${data.referralEmail}\n- Phone: ${data.referralPhone || 'Not provided'}\n\nLog in to your admin panel to follow up.`,
+    text: `New referral submission received!\n\nReferrer: ${data.referrerFirstName} ${data.referrerLastName}\n\nReferral Details:\n- LinkedIn: ${data.referralLinkedinUrl}\n- Email: ${data.referralEmail}\n- Phone: ${data.referralPhone || 'Not provided'}${data.referralAbout ? `\n\nAbout:\n${data.referralAbout}` : ''}\n\nLog in to your admin panel to follow up.`,
     html: `
       <!DOCTYPE html>
       <html>
@@ -131,6 +132,14 @@ export async function sendReferralNotification(
             <div class="info-row">
               <span class="label">Phone:</span> ${data.referralPhone || 'Not provided'}
             </div>
+            ${data.referralAbout ? `
+            <div class="info-row">
+              <span class="label">About:</span>
+              <div style="margin-top: 8px; padding: 12px; background-color: #f8f9fa; border-left: 3px solid #0066CC; border-radius: 4px;">
+                ${data.referralAbout.replace(/\n/g, '<br>')}
+              </div>
+            </div>
+            ` : ''}
           </div>
         </div>
       </body>

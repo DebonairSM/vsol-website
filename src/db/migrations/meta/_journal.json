@@ -15,6 +15,13 @@
       "when": 1762309399419,
       "tag": "0001_many_triton",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1762311200270,
+      "tag": "0002_stiff_firestar",
+      "breakpoints": true
     }
   ]
 }

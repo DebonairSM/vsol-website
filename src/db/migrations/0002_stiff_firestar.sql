@@ -1,0 +1,1 @@
+ALTER TABLE `referrals` ADD `referral_about` text;

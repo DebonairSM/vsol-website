@@ -120,7 +120,8 @@ body {
   font-style: italic;
 }
 
-.form-input {
+.form-input,
+.form-textarea {
   width: 100%;
   padding: 12px 16px;
   font-size: 16px;
@@ -131,17 +132,26 @@ body {
   background-color: var(--white);
 }
 
-.form-input:focus {
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+.form-input:focus,
+.form-textarea:focus {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
 }
 
-.form-input.error {
+.form-input.error,
+.form-textarea.error {
   border-color: var(--error-color);
 }
 
-.form-input.error:focus {
+.form-input.error:focus,
+.form-textarea.error:focus {
   box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
 }
 
@@ -244,6 +254,35 @@ body {
   color: #0c5a1e;
   margin-top: 16px !important;
   font-style: italic;
+}
+
+.add-another-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-another-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.add-another-button:active {
+  transform: translateY(0);
+}
+
+.add-another-button .material-icons {
+  font-size: 20px;
 }
 
 /* Error Container */

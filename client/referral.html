@@ -55,7 +55,6 @@
     <div class="referral-container">
       <!-- Header -->
       <div class="referral-header">
-        <img src="/images/vsol_logo_underline.png" alt="VSol Software" class="referral-logo">
         <h1 id="greeting" class="referral-greeting">Thank you for your referral!</h1>
         <p id="subtitle" class="referral-subtitle">Help us connect with potential clients</p>
       </div>
@@ -109,6 +108,20 @@
             >
           </div>
           
+          <!-- About Referral Field -->
+          <div class="form-group">
+            <label class="form-label" for="about">
+              Tell us about who you're referring <span class="optional">(optional)</span>
+            </label>
+            <textarea 
+              id="about" 
+              name="about" 
+              class="form-textarea"
+              placeholder="Tell us about their role, company, or why they might be interested in our services..."
+              rows="4"
+            ></textarea>
+          </div>
+          
           <!-- Honeypot field (hidden from users, catches bots) -->
           <input 
             type="text" 
@@ -133,7 +146,10 @@
           </div>
           <h3>Thank you for your referral!</h3>
           <p id="successText">We've received your submission and will reach out soon.</p>
-          <p class="success-note">Feel free to submit another referral using the form above.</p>
+          <button type="button" class="add-another-button" id="addAnotherBtn">
+            <span class="material-icons">add_circle</span>
+            Add Another Referral
+          </button>
         </div>
         
         <!-- Error Message -->

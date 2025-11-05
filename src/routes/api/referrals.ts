@@ -9,6 +9,7 @@ interface ReferralBody {
   linkedinUrl: string;
   email: string;
   phone?: string;
+  about?: string;
   website?: string; // Honeypot field
 }
 
@@ -56,7 +57,7 @@ export async function referralsRoutes(app: FastifyInstance) {
       reply: FastifyReply
     ) => {
       try {
-        const { referrerFirstName, referrerLastName, linkedinUrl, email, phone, website } = request.body;
+        const { referrerFirstName, referrerLastName, linkedinUrl, email, phone, about, website } = request.body;
 
         // Honeypot check - if website field is filled, it's likely a bot
         if (website) {
@@ -115,6 +116,7 @@ export async function referralsRoutes(app: FastifyInstance) {
           referralLinkedinUrl: linkedinUrl,
           referralEmail: email,
           referralPhone: phone || null,
+          referralAbout: about || null,
           ipAddress,
           userAgent,
         }).returning();
@@ -138,6 +140,7 @@ export async function referralsRoutes(app: FastifyInstance) {
             referralLinkedinUrl: linkedinUrl,
             referralEmail: email,
             referralPhone: phone,
+            referralAbout: about,
           }, app.log),
         ]).catch(error => {
           app.log.error({ error }, 'Failed to send email notifications');

@@ -76,6 +76,7 @@ export const referrals = sqliteTable('referrals', {
   referralLinkedinUrl: text('referral_linkedin_url').notNull(),
   referralEmail: text('referral_email').notNull(),
   referralPhone: text('referral_phone'),
+  referralAbout: text('referral_about'),
   ipAddress: text('ip_address'),
   userAgent: text('user_agent'),
   submittedAt: integer('submitted_at', { mode: 'timestamp' })
