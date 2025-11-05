@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://vsol.software/</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://vsol.software/images/vsol_logo_underline.png</image:loc>
+      <image:title>Visual Solutions Software Consultants</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Agentic AI Page -->
+  <url>
+    <loc>https://vsol.software/agentic.html</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vsol.software/images/rommel-headshot.jpg</image:loc>
+      <image:title>Rommel - Agent Master</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Spreadsheet Automation Page -->
+  <url>
+    <loc>https://vsol.software/spreadsheet-automation.html</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Referral Page -->
+  <url>
+    <loc>https://vsol.software/referral.html</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+</urlset>
+

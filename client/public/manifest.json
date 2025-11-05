@@ -1,0 +1,22 @@
+{
+  "name": "Visual Solutions Software Consultants",
+  "short_name": "VSol Software",
+  "description": "Software consulting and development services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/images/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/vsol_sparkels_72x68.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+  ]
+}
+
