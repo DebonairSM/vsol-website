@@ -1,12 +1,11 @@
 import type { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 import { getDatabase } from '../../db/index.js';
 import { referrals } from '../../db/schema.js';
-import { sendReferralConfirmation, sendReferralNotification } from '../../services/email.js';
+import { sendReferralNotification } from '../../services/email.js';
 
 interface ReferralBody {
   referrerFirstName: string;
   referrerLastName: string;
-  referrerEmail: string;
   linkedinUrl: string;
   email: string;
   phone?: string;
@@ -58,7 +57,7 @@ export async function referralsRoutes(app: FastifyInstance) {
       reply: FastifyReply
     ) => {
       try {
-        const { referrerFirstName, referrerLastName, referrerEmail, linkedinUrl, email, phone, about, website } = request.body;
+        const { referrerFirstName, referrerLastName, linkedinUrl, email, phone, about, website } = request.body;
 
         // Honeypot check - if website field is filled, it's likely a bot
         if (website) {
@@ -80,19 +79,10 @@ export async function referralsRoutes(app: FastifyInstance) {
         }
 
         // Validate required fields
-        if (!referrerFirstName || !referrerLastName || !referrerEmail || !linkedinUrl || !email) {
+        if (!referrerFirstName || !referrerLastName || !linkedinUrl || !email) {
           return reply.status(400).send({
             success: false,
             error: 'Missing required fields',
-          });
-        }
-        
-        // Validate referrer email format
-        const referrerEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!referrerEmailRegex.test(referrerEmail)) {
-          return reply.status(400).send({
-            success: false,
-            error: 'Invalid referrer email address',
           });
         }
 
@@ -123,7 +113,6 @@ export async function referralsRoutes(app: FastifyInstance) {
         const result = await db.insert(referrals).values({
           referrerFirstName,
           referrerLastName,
-          referrerEmail,
           referralLinkedinUrl: linkedinUrl,
           referralEmail: email,
           referralPhone: phone || null,
@@ -138,24 +127,16 @@ export async function referralsRoutes(app: FastifyInstance) {
           referralEmail: email,
         }, 'New referral created');
 
-        // Send email notifications asynchronously (don't block response)
-        Promise.all([
-          sendReferralConfirmation({
-            referrerFirstName,
-            referrerLastName,
-            referrerEmail,
-            referredEmail: email,
-          }, app.log),
-          sendReferralNotification({
-            referrerFirstName,
-            referrerLastName,
-            referralLinkedinUrl: linkedinUrl,
-            referralEmail: email,
-            referralPhone: phone,
-            referralAbout: about,
-          }, app.log),
-        ]).catch(error => {
-          app.log.error({ error }, 'Failed to send email notifications');
+        // Send email notification to admin asynchronously (don't block response)
+        sendReferralNotification({
+          referrerFirstName,
+          referrerLastName,
+          referralLinkedinUrl: linkedinUrl,
+          referralEmail: email,
+          referralPhone: phone,
+          referralAbout: about,
+        }, app.log).catch(error => {
+          app.log.error({ error }, 'Failed to send email notification');
         });
 
         return reply.status(201).send({
