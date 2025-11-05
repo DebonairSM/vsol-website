@@ -3,6 +3,7 @@ import { config } from './config/index.js';
 import { logger } from './utils/logger.js';
 import { getDatabase, closeDatabase } from './db/index.js';
 import { migrate } from 'drizzle-orm/better-sqlite3/migrator';
+import { initializeSendGrid } from './services/email.js';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -22,6 +23,10 @@ async function start() {
       : './src/db/migrations';
     migrate(db, { migrationsFolder });
     logger.info('Migrations completed successfully');
+    
+    // Initialize SendGrid for email notifications
+    initializeSendGrid();
+    logger.info('Email service initialized');
     
     // Create and start the app
     const app = await createApp();

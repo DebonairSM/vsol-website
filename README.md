@@ -13,6 +13,8 @@ Modern, responsive website for VSol Software Consulting built with Node.js, Type
 - Health check endpoints
 - Structured logging with Pino
 - Security headers with Helmet
+- Referral landing page with email notifications
+- Rate limiting and spam protection
 - Render MCP server integration for AI-powered infrastructure management
 
 ## Architecture
@@ -130,11 +132,13 @@ vsol-website/
 
 ## Database
 
-The project uses SQLite with Drizzle ORM. The schema is set up with tables for future CMS functionality:
+The project uses SQLite with Drizzle ORM. The schema includes:
 
 - `content` - For blog posts, events, news
 - `contact_submissions` - For contact form submissions
 - `settings` - For site configuration
+- `leads` - For spreadsheet automation form submissions
+- `referrals` - For referral program submissions
 
 To generate migrations after schema changes:
 
@@ -156,15 +160,90 @@ npm run db:studio
 - `GET /api/health` - Basic health check
 - `GET /api/health/ready` - Readiness check with dependencies
 
+### Referrals
+
+- `POST /api/referral/submit` - Submit a new referral
+- `GET /api/referrals` - Get all referrals (admin)
+
+### Leads
+
+- `POST /api/leads` - Submit a new lead from spreadsheet automation
+- `GET /api/leads` - Get all leads (admin)
+
+## Referral Landing Page
+
+The referral landing page allows recipients of outreach emails to submit referrals by accessing a URL with an encoded referrer parameter.
+
+### Setup
+
+1. **Configure SendGrid API Key:**
+   
+   Add your SendGrid API key to your environment variables. You can obtain an API key from [SendGrid's API Keys page](https://app.sendgrid.com/settings/api_keys).
+   
+   Create a `.env` file in the project root:
+   ```bash
+   SENDGRID_API_KEY=your_sendgrid_api_key_here
+   ADMIN_EMAIL=rommel@vsol.software
+   REFERRAL_NOTIFICATION_ENABLED=true
+   ```
+
+2. **Generate Referral Links:**
+   
+   Referral links use Base64 encoding with the format: `VSOL:FirstName:LastName`
+   
+   Example in Node.js:
+   ```javascript
+   const referrerData = `VSOL:John:Smith`;
+   const encoded = Buffer.from(referrerData).toString('base64');
+   const referralUrl = `https://vsol.software/referral?ref=${encoded}`;
+   // https://vsol.software/referral?ref=VlNPTDpKb2huOlNtaXRo
+   ```
+
+3. **Access the Page:**
+   
+   Navigate to `http://localhost:8080/referral.html` in development or `https://vsol.software/referral` in production.
+
+### Features
+
+- Personalized greeting using decoded referrer information
+- LinkedIn profile URL validation
+- Email validation
+- Optional phone number field
+- Honeypot spam protection
+- Rate limiting (5 submissions per IP per 15 minutes)
+- Email notifications to both referrer and admin
+- Mobile-responsive design
+- Success/error message handling
+
+### Database
+
+Referrals are stored in the `referrals` table with the following fields:
+- Referrer first and last name
+- Referral LinkedIn URL
+- Referral email and phone
+- IP address and user agent
+- Submission timestamp
+
+### Email Notifications
+
+When a referral is submitted, two emails are sent via SendGrid:
+1. **Confirmation email** to the referrer thanking them for the submission
+2. **Notification email** to the admin with the referral details
+
+To disable email notifications, set `REFERRAL_NOTIFICATION_ENABLED=false` in your environment.
+
 ## Environment Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|
 | NODE_ENV | Environment (development/production/test) | development |
-| PORT | Server port | 8080 |
+| PORT | Server port | 8081 |
 | HOST | Server host | 0.0.0.0 |
 | DATABASE_URL | SQLite database path | ./data/vsol.db |
 | LOG_LEVEL | Logging level (trace/debug/info/warn/error/fatal) | info |
+| SENDGRID_API_KEY | SendGrid API key for email notifications (optional) | - |
+| ADMIN_EMAIL | Email address to receive referral notifications | rommel@vsol.software |
+| REFERRAL_NOTIFICATION_ENABLED | Enable/disable email notifications | true |
 | RENDER_API_KEY | Render API key for MCP server (optional) | - |
 
 ## Render MCP Server

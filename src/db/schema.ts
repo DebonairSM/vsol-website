@@ -66,6 +66,23 @@ export const leads = sqliteTable('leads', {
     .notNull(),
 });
 
+/**
+ * Referrals table - for referral program submissions
+ */
+export const referrals = sqliteTable('referrals', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  referrerFirstName: text('referrer_first_name').notNull(),
+  referrerLastName: text('referrer_last_name').notNull(),
+  referralLinkedinUrl: text('referral_linkedin_url').notNull(),
+  referralEmail: text('referral_email').notNull(),
+  referralPhone: text('referral_phone'),
+  ipAddress: text('ip_address'),
+  userAgent: text('user_agent'),
+  submittedAt: integer('submitted_at', { mode: 'timestamp' })
+    .default(sql`(unixepoch())`)
+    .notNull(),
+});
+
 export type Content = typeof content.$inferSelect;
 export type NewContent = typeof content.$inferInsert;
 export type ContactSubmission = typeof contactSubmissions.$inferSelect;
@@ -74,4 +91,6 @@ export type Setting = typeof settings.$inferSelect;
 export type NewSetting = typeof settings.$inferInsert;
 export type Lead = typeof leads.$inferSelect;
 export type NewLead = typeof leads.$inferInsert;
+export type Referral = typeof referrals.$inferSelect;
+export type NewReferral = typeof referrals.$inferInsert;
 

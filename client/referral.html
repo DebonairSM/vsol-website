@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit a referral to VSol Software and help us connect with potential clients.">
+  <meta name="keywords" content="referral, vsol software, software consulting, business referral">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Referral Program | VSol Software">
+  <meta property="og:description" content="Submit a referral to VSol Software and help us connect with potential clients.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vsol.software/referral">
+  <meta property="og:image" content="https://vsol.software/images/vsol_logo_underline.png">
+  
+  <title>Referral Program | VSol Software</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/referral.css">
+</head>
+<body class="font-sans antialiased">
+  <!-- Navigation -->
+  <nav id="main-nav" class="fixed w-full z-50 bg-white shadow-md border-b-4 border-accent-500">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="/" class="flex items-center">
+          <img src="/images/vsol_logo_underline.png" alt="VSol Software" class="h-10 md:h-14" style="max-width: 280px;">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="/" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Home</a>
+          <a href="/#services" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Services</a>
+          <a href="/#contacts" class="nav-link text-primary-600 hover:text-primary-700 transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-24 pb-16 min-h-screen bg-gray-50">
+    <div class="referral-container">
+      <!-- Header -->
+      <div class="referral-header">
+        <img src="/images/vsol_logo_underline.png" alt="VSol Software" class="referral-logo">
+        <h1 id="greeting" class="referral-greeting">Thank you for your referral!</h1>
+        <p id="subtitle" class="referral-subtitle">Help us connect with potential clients</p>
+      </div>
+
+      <!-- Form Container -->
+      <div class="form-container">
+        <form id="referralForm" class="referral-form">
+          <!-- LinkedIn URL Field -->
+          <div class="form-group">
+            <label class="form-label" for="linkedinUrl">
+              LinkedIn Profile URL <span class="required">*</span>
+            </label>
+            <input 
+              type="url" 
+              id="linkedinUrl" 
+              name="linkedinUrl" 
+              class="form-input"
+              placeholder="https://linkedin.com/in/yourconnection"
+              required
+            >
+            <div class="error-message" id="linkedinError"></div>
+          </div>
+          
+          <!-- Email Field -->
+          <div class="form-group">
+            <label class="form-label" for="email">
+              Email Address <span class="required">*</span>
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-input"
+              placeholder="email@example.com"
+              required
+            >
+            <div class="error-message" id="emailError"></div>
+          </div>
+          
+          <!-- Phone Field -->
+          <div class="form-group">
+            <label class="form-label" for="phone">
+              Phone Number <span class="optional">(optional)</span>
+            </label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              class="form-input"
+              placeholder="(555) 123-4567"
+            >
+          </div>
+          
+          <!-- Honeypot field (hidden from users, catches bots) -->
+          <input 
+            type="text" 
+            name="website" 
+            id="website"
+            style="display:none" 
+            tabindex="-1" 
+            autocomplete="off"
+          >
+          
+          <!-- Submit Button -->
+          <button type="submit" class="submit-button" id="submitBtn">
+            <span id="buttonText">Submit Referral</span>
+            <span id="buttonSpinner" class="spinner" style="display:none;"></span>
+          </button>
+        </form>
+        
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage" style="display:none;">
+          <div class="success-icon">
+            <span class="material-icons">check_circle</span>
+          </div>
+          <h3>Thank you for your referral!</h3>
+          <p id="successText">We've received your submission and will reach out soon.</p>
+          <p class="success-note">Feel free to submit another referral using the form above.</p>
+        </div>
+        
+        <!-- Error Message -->
+        <div class="error-container" id="errorMessage" style="display:none;">
+          <div class="error-icon">
+            <span class="material-icons">error</span>
+          </div>
+          <p id="errorText">An error occurred. Please try again.</p>
+        </div>
+      </div>
+
+      <!-- Info Section -->
+      <div class="info-section">
+        <div class="info-card">
+          <span class="material-icons info-icon">connect_without_contact</span>
+          <h3>Make Connections</h3>
+          <p>Help your network discover quality software development services</p>
+        </div>
+        <div class="info-card">
+          <span class="material-icons info-icon">handshake</span>
+          <h3>Build Partnerships</h3>
+          <p>Connect businesses with solutions that drive success</p>
+        </div>
+        <div class="info-card">
+          <span class="material-icons info-icon">stars</span>
+          <h3>Quality Service</h3>
+          <p>Refer with confidence to a trusted software consulting partner</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white text-gray-900 py-8 border-t">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; <span id="current-year"></span> vsol.software. All rights reserved.</p>
+      <div class="mt-4">
+        <p class="text-sm text-gray-600">
+          <a href="mailto:info@vsol.software" class="text-primary-600 hover:underline">info@vsol.software</a> | 
+          <a href="tel:+13523978650" class="text-primary-600 hover:underline">(352) 397-8650</a>
+        </p>
+      </div>
+      <img src="/images/vsol_sparkels_72x68.png" alt="VSol" class="mx-auto mt-4 h-12">
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/referral-main.ts"></script>
+</body>
+</html>
+

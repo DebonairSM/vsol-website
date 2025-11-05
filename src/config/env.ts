@@ -6,6 +6,9 @@ const envSchema = z.object({
   HOST: z.string().default('0.0.0.0'),
   DATABASE_URL: z.string().default('./data/vsol.db'),
   LOG_LEVEL: z.enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace']).default('info'),
+  SENDGRID_API_KEY: z.string().optional(),
+  ADMIN_EMAIL: z.string().email().default('rommel@vsol.software'),
+  REFERRAL_NOTIFICATION_ENABLED: z.coerce.boolean().default(true),
 });
 
 export type Env = z.infer<typeof envSchema>;

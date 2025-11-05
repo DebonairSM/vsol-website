@@ -13,6 +13,7 @@ export default defineConfig({
         agentic: path.resolve(__dirname, 'client/agentic.html'),
         spreadsheet: path.resolve(__dirname, 'client/spreadsheet-automation.html'),
         secretLeads: path.resolve(__dirname, 'client/secret-leads-viewer.html'),
+        referral: path.resolve(__dirname, 'client/referral.html'),
       },
     },
   },

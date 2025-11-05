@@ -17,5 +17,10 @@ export const config = {
   logging: {
     level: env.LOG_LEVEL,
   },
+  email: {
+    sendgridApiKey: env.SENDGRID_API_KEY,
+    adminEmail: env.ADMIN_EMAIL,
+    referralNotificationEnabled: env.REFERRAL_NOTIFICATION_ENABLED,
+  },
 } as const;
 
