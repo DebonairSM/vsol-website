@@ -116,7 +116,23 @@ function loadServices(services: ContentData['services']) {
             (item) => `
           <div class="card">
             <h3 class="text-2xl font-bold mb-4 text-primary-600">${item.title}</h3>
-            <p class="text-gray-700">${item.description}</p>
+            <p class="text-gray-700 ${item.title === 'Agentic AI' ? 'mb-4' : ''}">${item.description}</p>
+            ${item.title === 'Agentic AI' ? `
+            <a href="/agentic.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="2" fill="currentColor" />
+                <circle cx="6" cy="8" r="1.5" fill="currentColor" />
+                <circle cx="18" cy="8" r="1.5" fill="currentColor" />
+                <circle cx="6" cy="16" r="1.5" fill="currentColor" />
+                <circle cx="18" cy="16" r="1.5" fill="currentColor" />
+                <line x1="12" y1="12" x2="6" y2="8" stroke="currentColor" stroke-width="1" opacity="0.6" />
+                <line x1="12" y1="12" x2="18" y2="8" stroke="currentColor" stroke-width="1" opacity="0.6" />
+                <line x1="12" y1="12" x2="6" y2="16" stroke="currentColor" stroke-width="1" opacity="0.6" />
+                <line x1="12" y1="12" x2="18" y2="16" stroke="currentColor" stroke-width="1" opacity="0.6" />
+              </svg>
+              Learn More
+            </a>
+            ` : ''}
           </div>
         `
           )
