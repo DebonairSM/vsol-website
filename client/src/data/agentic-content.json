@@ -10,7 +10,7 @@
   },
   "featuredProduct": {
     "badge": "NEW OFFERING",
-    "title": "Spreadsheet Automation Platform",
+    "title": "Work Automation Platform",
     "description": "Transform manual spreadsheet workflows into automated systems with AI-generated interactive mockups delivered during discovery calls. We analyze your current processes, design streamlined solutions, and provide working demonstrations same-day. Complete with workflow documentation, ROI analysis, and deployment-ready prototypes.",
     "features": [
       "AI-generated interactive mockups delivered during discovery calls",
@@ -71,7 +71,7 @@
         "description": "Automated generation of API documentation, code comments, architecture diagrams, and user guides. AI handles the writing; humans ensure accuracy and clarity."
       },
       {
-        "title": "Spreadsheet Automation Platform",
+        "title": "Work Automation Platform",
         "description": "Transform manual spreadsheet workflows into automated systems with AI-generated interactive mockups delivered during discovery calls. We analyze your current processes, design streamlined solutions, and provide working demonstrations same-day. Complete with workflow documentation, ROI analysis, and deployment-ready prototypes.",
         "link": "/spreadsheet-automation.html"
       }
