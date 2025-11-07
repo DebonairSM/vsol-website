@@ -11,7 +11,7 @@
   "featuredProduct": {
     "badge": "NEW OFFERING",
     "title": "Work Automation Platform",
-    "description": "Transform manual spreadsheet workflows into automated systems with AI-generated interactive mockups delivered during discovery calls. We analyze your current processes, design streamlined solutions, and provide working demonstrations same-day. Complete with workflow documentation, ROI analysis, and deployment-ready prototypes.",
+    "description": "We turn manual workflows—spreadsheets, task lists, calendars, and planners—into intelligent automated systems. In a single discovery session, we analyze your processes and generate live mockups, then deliver a working prototype within hours. Every engagement comes complete with workflow documentation, ROI analysis, and deployment-ready deliverables.",
     "features": [
       "AI-generated interactive mockups delivered during discovery calls",
       "Same-day working demonstrations",
@@ -72,7 +72,7 @@
       },
       {
         "title": "Work Automation Platform",
-        "description": "Transform manual spreadsheet workflows into automated systems with AI-generated interactive mockups delivered during discovery calls. We analyze your current processes, design streamlined solutions, and provide working demonstrations same-day. Complete with workflow documentation, ROI analysis, and deployment-ready prototypes.",
+        "description": "We turn manual workflows—spreadsheets, task lists, calendars, and planners—into intelligent automated systems. In a single discovery session, we analyze your processes and generate live mockups, then deliver a working prototype within hours. Every engagement comes complete with workflow documentation, ROI analysis, and deployment-ready deliverables.",
         "link": "/spreadsheet-automation.html"
       }
     ]
