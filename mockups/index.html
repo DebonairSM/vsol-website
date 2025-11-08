@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSol Dashboard Mockups - Index</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen p-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <div class="inline-block bg-blue-600 text-white rounded-lg p-4 mb-4">
+                <i class="fas fa-code text-4xl"></i>
+            </div>
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">VSol Dashboard Mockups</h1>
+            <p class="text-gray-600">Role-based access control dashboard with Google OAuth</p>
+        </div>
+
+        <!-- Authentication -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Authentication</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-100 p-3 rounded-full">
+                            <i class="fas fa-sign-in-alt text-2xl text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-900">Login Page</h3>
+                            <p class="text-sm text-gray-600">Google OAuth authentication with traditional login option</p>
+                        </div>
+                    </div>
+                    <a href="login.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        View <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Role-Based Dashboards -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Role-Based Dashboards</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Admin Dashboard -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="bg-red-100 p-3 rounded-full">
+                            <i class="fas fa-user-shield text-2xl text-red-600"></i>
+                        </div>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-red-100 text-red-800">System Admin</span>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">Admin Dashboard</h3>
+                    <p class="text-sm text-gray-600 mb-4">Full access with user management, audit logs, system settings, and analytics</p>
+                    <ul class="text-xs text-gray-600 space-y-1 mb-4">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>User Management</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Audit Logs</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>System Settings</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Database Access</li>
+                    </ul>
+                    <a href="dashboard-admin.html" class="block w-full text-center bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                        View Dashboard <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Sales Dashboard -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="bg-green-100 p-3 rounded-full">
+                            <i class="fas fa-chart-line text-2xl text-green-600"></i>
+                        </div>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800">Sales Rep</span>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">Sales Dashboard</h3>
+                    <p class="text-sm text-gray-600 mb-4">Lead management, pipeline tracking, referrals, and sales analytics</p>
+                    <ul class="text-xs text-gray-600 space-y-1 mb-4">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Lead Management</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Sales Pipeline</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Referrals</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Analytics</li>
+                    </ul>
+                    <a href="dashboard-sales.html" class="block w-full text-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                        View Dashboard <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Consultant Dashboard (Coming Soon) -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow opacity-75">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full">
+                            <i class="fas fa-user-tie text-2xl text-blue-600"></i>
+                        </div>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800">Consultant</span>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">Consultant Dashboard</h3>
+                    <p class="text-sm text-gray-600 mb-4">Project assignments, client information, time logs, and deliverables</p>
+                    <ul class="text-xs text-gray-600 space-y-1 mb-4">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Project Assignments</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Client Contacts</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Time Tracking</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Reports</li>
+                    </ul>
+                    <button class="block w-full text-center bg-gray-400 text-white px-4 py-2 rounded-lg cursor-not-allowed">
+                        Coming Soon
+                    </button>
+                </div>
+
+                <!-- Client Portal -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full">
+                            <i class="fas fa-user text-2xl text-purple-600"></i>
+                        </div>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-purple-100 text-purple-800">Client</span>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">Client Portal</h3>
+                    <p class="text-sm text-gray-600 mb-4">Project tracking, documentation, support tickets, and billing</p>
+                    <ul class="text-xs text-gray-600 space-y-1 mb-4">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Project Status</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Documentation</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Support Tickets</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Billing</li>
+                    </ul>
+                    <a href="dashboard-client.html" class="block w-full text-center bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                        View Portal <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Pages -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Admin Features</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-red-100 p-3 rounded-full">
+                            <i class="fas fa-users-cog text-2xl text-red-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-900">User Management</h3>
+                            <p class="text-sm text-gray-600">Add, edit, and manage users with role assignments</p>
+                        </div>
+                    </div>
+                    <a href="user-management.html" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                        View <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Overview -->
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Features Demonstrated</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                        <i class="fas fa-shield-alt text-blue-600"></i>
+                        Security
+                    </h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Google OAuth 2.0</li>
+                        <li>• Role-based access control</li>
+                        <li>• Session management</li>
+                        <li>• Audit logging</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                        <i class="fas fa-users text-green-600"></i>
+                        User Management
+                    </h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Create/edit users</li>
+                        <li>• Role assignment</li>
+                        <li>• User profiles</li>
+                        <li>• Activity tracking</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                        <i class="fas fa-desktop text-purple-600"></i>
+                        UI Components
+                    </h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Collapsible sidebar</li>
+                        <li>• Data tables</li>
+                        <li>• Modal forms</li>
+                        <li>• Metric cards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-8 text-center text-gray-600 text-sm">
+            <p>Built with Tailwind CSS • Interactive HTML Mockups</p>
+            <p class="mt-2">© 2024 VSol Software</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
