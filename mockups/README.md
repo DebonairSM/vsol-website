@@ -4,11 +4,14 @@ This folder contains interactive HTML mockups for the VSol Software dashboard wi
 
 ## Files
 
-1. **login.html** - Login page with Google OAuth authentication
-2. **dashboard-admin.html** - System Administrator dashboard view
-3. **dashboard-sales.html** - Sales Representative dashboard view
-4. **dashboard-client.html** - Software Client portal view
-5. **user-management.html** - User management interface (Admin only)
+1. **index.html** - Navigation hub to access all mockups
+2. **login.html** - Login page with Google OAuth authentication
+3. **dashboard-admin.html** - System Administrator dashboard view
+4. **dashboard-sales.html** - Sales Representative dashboard view
+5. **dashboard-client.html** - Software Client portal view
+6. **dashboard-referrer.html** - Referrer portal for tracking referrals
+7. **user-management.html** - User management interface (Admin only)
+8. **referral-management.html** - Referral tracking by source (Admin/Sales only)
 
 ## Features Demonstrated
 

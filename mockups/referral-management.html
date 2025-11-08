@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Management - VSol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .sidebar-collapsed { width: 4rem; }
+        .sidebar-expanded { width: 16rem; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar (Same as admin) -->
+        <aside id="sidebar" class="sidebar-expanded bg-gray-900 text-white transition-all duration-300 flex flex-col">
+            <div class="p-4 border-b border-gray-800 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="bg-blue-600 rounded-lg p-2">
+                        <i class="fas fa-code text-xl"></i>
+                    </div>
+                    <span class="font-bold text-lg sidebar-text">VSol</span>
+                </div>
+                <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="p-4 border-b border-gray-800">
+                <div class="flex items-center gap-3">
+                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=3B82F6&color=fff" class="w-10 h-10 rounded-full">
+                    <div class="sidebar-text flex-1 min-w-0">
+                        <p class="font-medium truncate">Admin User</p>
+                        <span class="text-xs bg-red-600 px-2 py-0.5 rounded-full">System Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="flex-1 overflow-y-auto p-4">
+                <div class="space-y-1">
+                    <a href="dashboard-admin.html" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-800">
+                        <i class="fas fa-chart-line w-5"></i>
+                        <span class="sidebar-text">Dashboard</span>
+                    </a>
+                    <a href="user-management.html" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-800">
+                        <i class="fas fa-users w-5"></i>
+                        <span class="sidebar-text">Users</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-blue-600 text-white">
+                        <i class="fas fa-handshake w-5"></i>
+                        <span class="sidebar-text">Referrals</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-800">
+                        <i class="fas fa-clipboard-list w-5"></i>
+                        <span class="sidebar-text">Leads</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-800">
+                        <i class="fas fa-envelope w-5"></i>
+                        <span class="sidebar-text">Contact Forms</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-800">
+                        <i class="fas fa-history w-5"></i>
+                        <span class="sidebar-text">Audit Logs</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-800">
+                        <i class="fas fa-database w-5"></i>
+                        <span class="sidebar-text">Database</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-800">
+                        <i class="fas fa-cog w-5"></i>
+                        <span class="sidebar-text">Settings</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="p-4 border-t border-gray-800">
+                <a href="login.html" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-800 text-red-400">
+                    <i class="fas fa-sign-out-alt w-5"></i>
+                    <span class="sidebar-text">Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="bg-white border-b border-gray-200 px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">Referral Management</h1>
+                        <p class="text-sm text-gray-600">Track and manage all referrals by source</p>
+                    </div>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center gap-2">
+                        <i class="fas fa-download"></i>
+                        Export Report
+                    </button>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <main class="flex-1 overflow-auto p-6">
+                <!-- Summary Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-blue-600">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600 mb-1">Total Referrals</p>
+                                <p class="text-3xl font-bold text-gray-900">47</p>
+                                <p class="text-xs text-gray-500 mt-2">All time</p>
+                            </div>
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-handshake text-2xl text-blue-600"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-yellow-600">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600 mb-1">New</p>
+                                <p class="text-3xl font-bold text-gray-900">18</p>
+                                <p class="text-xs text-yellow-600 mt-2">
+                                    <i class="fas fa-clock"></i> Pending review
+                                </p>
+                            </div>
+                            <div class="bg-yellow-100 p-3 rounded-full">
+                                <i class="fas fa-star text-2xl text-yellow-600"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-purple-600">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600 mb-1">Contacted</p>
+                                <p class="text-3xl font-bold text-gray-900">21</p>
+                                <p class="text-xs text-purple-600 mt-2">
+                                    <i class="fas fa-phone"></i> In progress
+                                </p>
+                            </div>
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <i class="fas fa-phone-alt text-2xl text-purple-600"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-green-600">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600 mb-1">Converted</p>
+                                <p class="text-3xl font-bold text-gray-900">8</p>
+                                <p class="text-xs text-green-600 mt-2">
+                                    <i class="fas fa-check-circle"></i> 17% conversion
+                                </p>
+                            </div>
+                            <div class="bg-green-100 p-3 rounded-full">
+                                <i class="fas fa-trophy text-2xl text-green-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filters & Search -->
+                <div class="bg-white rounded-lg shadow mb-6 p-4">
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <div class="flex-1 min-w-[250px]">
+                            <div class="relative">
+                                <input type="text" placeholder="Search by name, email, or company..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option>All Referrers</option>
+                            <option>Todd Miller (12)</option>
+                            <option>Sarah Johnson (8)</option>
+                            <option>Mike Chen (7)</option>
+                            <option>Anonymous (5)</option>
+                        </select>
+                        <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option>All Status</option>
+                            <option>New</option>
+                            <option>Contacted</option>
+                            <option>Converted</option>
+                        </select>
+                        <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option>All Forms</option>
+                            <option>Scan Form</option>
+                            <option>Challenge Form</option>
+                        </select>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-2">
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">All</button>
+                        <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">New</button>
+                        <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">Contacted</button>
+                        <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">Converted</button>
+                        <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
+                            <i class="fas fa-sync-alt mr-2"></i>Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Referrals Table -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gray-50 border-b border-gray-200">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        <input type="checkbox" class="rounded border-gray-300">
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Referrer</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact Name</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Company</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Form Type</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="checkbox" class="rounded border-gray-300">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Nov 7, 2024</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center gap-2">
+                                            <img src="https://ui-avatars.com/api/?name=Todd+Miller&background=F59E0B&color=fff" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="text-sm font-medium text-gray-900">Todd Miller</p>
+                                                <p class="text-xs text-gray-500">Referrer</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Rommel Bandeira</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">rommelb@gmail.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">VSol Software</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-800">Scan</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <select class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 border-0">
+                                            <option>New</option>
+                                            <option>Contacted</option>
+                                            <option>Converted</option>
+                                        </select>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900 mr-3" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="text-green-600 hover:text-green-900" title="Mark Contacted">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="checkbox" class="rounded border-gray-300">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Nov 6, 2024</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center gap-2">
+                                            <img src="https://ui-avatars.com/api/?name=Todd+Miller&background=F59E0B&color=fff" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="text-sm font-medium text-gray-900">Todd Miller</p>
+                                                <p class="text-xs text-gray-500">Referrer</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Celiane Bandeira</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">family@bandeira.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">-</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-800">Scan</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <select class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 border-0">
+                                            <option>New</option>
+                                            <option>Contacted</option>
+                                            <option>Converted</option>
+                                        </select>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900 mr-3" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="text-green-600 hover:text-green-900" title="Mark Contacted">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="checkbox" class="rounded border-gray-300">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Nov 5, 2024</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center gap-2">
+                                            <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=10B981&color=fff" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="text-sm font-medium text-gray-900">Sarah Johnson</p>
+                                                <p class="text-xs text-gray-500">Sales Rep</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Jane Williams</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">jane@techcorp.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">TechCorp Solutions</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs font-medium rounded-full bg-purple-100 text-purple-800">Challenge</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <select class="px-2 py-1 text-xs font-medium rounded-full bg-purple-100 text-purple-800 border-0">
+                                            <option>Contacted</option>
+                                            <option>New</option>
+                                            <option>Converted</option>
+                                        </select>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900 mr-3" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="text-green-600 hover:text-green-900" title="Mark Converted">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr class="hover:bg-gray-50 bg-green-50">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="checkbox" class="rounded border-gray-300">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Nov 2, 2024</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center gap-2">
+                                            <img src="https://ui-avatars.com/api/?name=Todd+Miller&background=F59E0B&color=fff" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="text-sm font-medium text-gray-900">Todd Miller</p>
+                                                <p class="text-xs text-gray-500">Referrer</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Alice Chen</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">alice@enterprise.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Enterprise Global</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-800">Scan</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800">
+                                            <i class="fas fa-check mr-1"></i>Converted
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="checkbox" class="rounded border-gray-300">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Oct 30, 2024</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
+                                                <i class="fas fa-user-secret text-gray-600 text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-medium text-gray-900">Anonymous</p>
+                                                <p class="text-xs text-gray-500">Via link</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">MEDEIROS TORRES</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">medeiros@email.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Grande Tech LTDA</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-800">Scan</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <select class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 border-0">
+                                            <option>New</option>
+                                            <option>Contacted</option>
+                                            <option>Converted</option>
+                                        </select>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900 mr-3" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="text-green-600 hover:text-green-900" title="Mark Contacted">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="bg-gray-50 px-6 py-3 border-t border-gray-200 flex items-center justify-between">
+                        <div class="text-sm text-gray-700">
+                            Showing <span class="font-medium">1</span> to <span class="font-medium">5</span> of <span class="font-medium">47</span> results
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100" disabled>Previous</button>
+                            <button class="px-3 py-1 bg-blue-600 text-white rounded">1</button>
+                            <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100">2</button>
+                            <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100">3</button>
+                            <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const texts = document.querySelectorAll('.sidebar-text');
+            
+            if (sidebar.classList.contains('sidebar-expanded')) {
+                sidebar.classList.remove('sidebar-expanded');
+                sidebar.classList.add('sidebar-collapsed');
+                texts.forEach(text => text.classList.add('hidden'));
+            } else {
+                sidebar.classList.remove('sidebar-collapsed');
+                sidebar.classList.add('sidebar-expanded');
+                texts.forEach(text => text.classList.remove('hidden'));
+            }
+        }
+    </script>
+</body>
+</html>
+
