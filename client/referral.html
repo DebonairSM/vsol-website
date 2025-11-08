@@ -120,64 +120,89 @@
       <!-- Form Container -->
       <div class="form-container">
         <form id="referralForm" class="referral-form">
-          <!-- LinkedIn URL Field -->
-          <div class="form-group">
-            <label class="form-label" for="linkedinUrl">
-              LinkedIn Profile URL <span class="required">*</span>
-            </label>
-            <input 
-              type="url" 
-              id="linkedinUrl" 
-              name="linkedinUrl" 
-              class="form-input"
-              placeholder="https://linkedin.com/in/yourconnection"
-              required
-            >
-            <div class="error-message" id="linkedinError"></div>
+          <!-- Your Name Field (shown only when no ref parameter) -->
+          <div id="nameFields" style="display:none;">
+            <div class="form-group">
+              <label class="form-label" for="fullName">
+                Your Name <span class="required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="fullName" 
+                name="fullName" 
+                class="form-input"
+                placeholder="John Smith"
+              >
+              <div class="error-message" id="fullNameError"></div>
+            </div>
           </div>
           
-          <!-- Email Field -->
-          <div class="form-group">
-            <label class="form-label" for="email">
-              Email Address <span class="required">*</span>
-            </label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              class="form-input"
-              placeholder="email@example.com"
-              required
-            >
-            <div class="error-message" id="emailError"></div>
-          </div>
-          
-          <!-- Phone Field -->
-          <div class="form-group">
-            <label class="form-label" for="phone">
-              Phone Number <span class="optional">(optional)</span>
-            </label>
-            <input 
-              type="tel" 
-              id="phone" 
-              name="phone" 
-              class="form-input"
-              placeholder="(555) 123-4567"
-            >
-          </div>
-          
-          <!-- About Referral Field -->
-          <div class="form-group">
-            <label class="form-label" for="about">
-              Tell us about who you're referring <span class="optional">(optional)</span>
-            </label>
-            <textarea 
-              id="about" 
-              name="about" 
-              class="form-textarea"
-              placeholder="Tell us about their role, company, or why they might be interested in our services..."
-              rows="4"
-            ></textarea>
+          <!-- Referral Information Section -->
+          <div class="form-section-wrapper">
+            <div class="form-section-header">
+              <h3>Person You're Referring</h3>
+              <p>Please provide contact information for the person you'd like to refer</p>
+            </div>
+            
+            <!-- LinkedIn URL Field -->
+            <div class="form-group">
+              <label class="form-label" for="linkedinUrl">
+                LinkedIn Profile URL <span class="required">*</span>
+              </label>
+              <input 
+                type="url" 
+                id="linkedinUrl" 
+                name="linkedinUrl" 
+                class="form-input"
+                placeholder="https://linkedin.com/in/yourconnection"
+                required
+              >
+              <div class="error-message" id="linkedinError"></div>
+            </div>
+            
+            <!-- Email Field -->
+            <div class="form-group">
+              <label class="form-label" for="email">
+                Email Address <span class="required">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="form-input"
+                placeholder="email@example.com"
+                required
+              >
+              <div class="error-message" id="emailError"></div>
+            </div>
+            
+            <!-- Phone Field -->
+            <div class="form-group">
+              <label class="form-label" for="phone">
+                Phone Number <span class="optional">(optional)</span>
+              </label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                class="form-input"
+                placeholder="(555) 123-4567"
+              >
+            </div>
+            
+            <!-- About Referral Field -->
+            <div class="form-group">
+              <label class="form-label" for="about">
+                Tell us about who you're referring <span class="optional">(optional)</span>
+              </label>
+              <textarea 
+                id="about" 
+                name="about" 
+                class="form-textarea"
+                placeholder="Tell us about their role, company, or why they might be interested in our services..."
+                rows="4"
+              ></textarea>
+            </div>
           </div>
           
           <!-- Honeypot field (hidden from users, catches bots) -->

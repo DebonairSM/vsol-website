@@ -42,15 +42,24 @@ function getRefParameter(): string | null {
 function updateGreeting(referrerInfo: ReferrerInfo | null) {
   const greetingElement = document.getElementById('greeting');
   const subtitleElement = document.getElementById('subtitle');
+  const nameFields = document.getElementById('nameFields');
   
   if (!greetingElement || !subtitleElement) return;
   
   if (referrerInfo) {
     greetingElement.textContent = `Hello ${referrerInfo.firstName} ${referrerInfo.lastName}!`;
     subtitleElement.textContent = 'Thank you for helping us connect with potential clients.';
+    // Hide name fields when we have referrer info from URL
+    if (nameFields) {
+      nameFields.style.display = 'none';
+    }
   } else {
     greetingElement.textContent = 'Welcome!';
     subtitleElement.textContent = 'Please enter your referral information below.';
+    // Show name fields when no referrer info in URL
+    if (nameFields) {
+      nameFields.style.display = 'block';
+    }
   }
 }
 
@@ -197,6 +206,19 @@ function setLoadingState(loading: boolean) {
 }
 
 /**
+ * Parse full name into first and last name
+ */
+function parseFullName(fullName: string): { firstName: string; lastName: string } {
+  const parts = fullName.trim().split(/\s+/);
+  if (parts.length === 1) {
+    return { firstName: parts[0], lastName: '' };
+  }
+  const firstName = parts[0];
+  const lastName = parts.slice(1).join(' ');
+  return { firstName, lastName };
+}
+
+/**
  * Clear form fields
  */
 function clearForm() {
@@ -206,6 +228,7 @@ function clearForm() {
   }
   
   // Clear all error states
+  clearFieldError('fullName');
   clearFieldError('linkedinUrl');
   clearFieldError('email');
 }
@@ -220,6 +243,7 @@ async function handleSubmit(event: Event, referrerInfo: ReferrerInfo | null) {
   hideMessages();
   
   // Clear previous errors
+  clearFieldError('fullName');
   clearFieldError('linkedinUrl');
   clearFieldError('email');
   
@@ -231,6 +255,24 @@ async function handleSubmit(event: Event, referrerInfo: ReferrerInfo | null) {
   const phone = (formData.get('phone') as string).trim();
   const about = (formData.get('about') as string).trim();
   const website = formData.get('website') as string; // Honeypot
+  
+  // Get name from form if no referrer info from URL
+  let firstName: string;
+  let lastName: string;
+  
+  if (referrerInfo) {
+    firstName = referrerInfo.firstName;
+    lastName = referrerInfo.lastName;
+  } else {
+    const fullName = (formData.get('fullName') as string || '').trim();
+    if (!fullName) {
+      showFieldError('fullName', 'Please enter your name');
+      return;
+    }
+    const parsedName = parseFullName(fullName);
+    firstName = parsedName.firstName;
+    lastName = parsedName.lastName;
+  }
   
   // Validation
   let hasError = false;
@@ -255,16 +297,10 @@ async function handleSubmit(event: Event, referrerInfo: ReferrerInfo | null) {
     return;
   }
   
-  // If no referrer info from URL, show error
-  if (!referrerInfo) {
-    showErrorMessage('Invalid referral link. Please use the link provided in your email.');
-    return;
-  }
-  
   // Prepare request body
   const requestBody = {
-    referrerFirstName: referrerInfo.firstName,
-    referrerLastName: referrerInfo.lastName,
+    referrerFirstName: firstName,
+    referrerLastName: lastName,
     linkedinUrl,
     email,
     phone: phone ? cleanPhone(phone) : undefined,
@@ -330,6 +366,15 @@ function init() {
   }
   
   // Add input event listeners for real-time validation feedback
+  const fullNameInput = document.getElementById('fullName') as HTMLInputElement;
+  if (fullNameInput) {
+    fullNameInput.addEventListener('input', () => {
+      if (fullNameInput.classList.contains('error')) {
+        clearFieldError('fullName');
+      }
+    });
+  }
+  
   const linkedinInput = document.getElementById('linkedinUrl') as HTMLInputElement;
   if (linkedinInput) {
     linkedinInput.addEventListener('blur', () => {
