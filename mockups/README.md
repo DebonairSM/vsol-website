@@ -48,6 +48,15 @@ This folder contains interactive HTML mockups for the VSol Software dashboard wi
 - Billing information
 - Limited navigation (only client-relevant sections)
 
+#### Referrer (New Role)
+- Personal referral link with copy functionality
+- Referral tracking dashboard (Total, Pending, In Progress, Converted)
+- Status updates for submitted referrals
+- Rewards program information
+- Ability to submit new referrals directly
+- Anonymous or authenticated access supported
+- Unique URL with Base64 encoded referrer information
+
 ### Key UI Components
 
 1. **Collapsible Sidebar**
@@ -94,6 +103,7 @@ This folder contains interactive HTML mockups for the VSol Software dashboard wi
 - **Consultant**: Blue (`bg-blue-600`)
 - **Sales Rep**: Green (`bg-green-600`)
 - **Client**: Purple (`bg-purple-600`)
+- **Referrer**: Yellow (`bg-yellow-600`)
 
 ### Typography
 - **Headings**: Bold, clear hierarchy
