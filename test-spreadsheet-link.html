@@ -62,17 +62,17 @@
         <h2>Quick Tests</h2>
         
         <h3>1. Test Direct Link</h3>
-        <a href="http://localhost:5173/spreadsheet-automation/" class="link-test" target="_blank">
+        <a href="http://localhost:8080/spreadsheet-automation/" class="link-test" target="_blank">
             Open Spreadsheet Automation →
         </a>
         
         <h3>2. Test Agentic Page</h3>
-        <a href="http://localhost:5173/agentic.html" class="link-test" target="_blank">
+        <a href="http://localhost:8080/agentic.html" class="link-test" target="_blank">
             Open Agentic Page (then scroll to Services) →
         </a>
         
         <h3>3. Test Camp Landing Page</h3>
-        <a href="http://localhost:5173/spreadsheet-automation/camp/" class="link-test" target="_blank">
+        <a href="http://localhost:8080/spreadsheet-automation/camp/" class="link-test" target="_blank">
             Open Camp Landing Page →
         </a>
     </div>
@@ -90,7 +90,7 @@
     
     <script>
         // Test server connectivity
-        fetch('http://localhost:5173/api/health')
+        fetch('http://localhost:8080/api/health')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('status').innerHTML = 
@@ -102,7 +102,7 @@
             });
         
         // Test JSON content
-        fetch('http://localhost:5173/data/agentic-content.json')
+        fetch('http://localhost:8080/data/agentic-content.json')
             .then(response => response.json())
             .then(data => {
                 const spreadsheetService = data.services.items.find(s => 

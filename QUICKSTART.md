@@ -18,12 +18,12 @@ npm run dev
 ```
 
 This command starts:
-- Backend server on `http://localhost:8080`
-- Frontend dev server on `http://localhost:5173`
+- Backend server on `http://localhost:8081`
+- Frontend dev server on `http://localhost:8080`
 
 ### 3. Open in Browser
 
-Navigate to `http://localhost:5173` to see your site.
+Navigate to `http://localhost:8080` to see your site.
 
 ## What You'll See
 
@@ -79,7 +79,7 @@ npm run format           # Format code
 
 ### Port Already in Use
 
-If port 8080 or 5173 is in use, update the `PORT` in `.env` or the Vite port in `vite.config.ts`.
+If port 8080 or 8081 is in use, update the `PORT` in `.env` or the Vite port in `vite.config.ts`.
 
 ### Database Errors
 

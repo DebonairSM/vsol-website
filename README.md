@@ -49,7 +49,7 @@ cp .env.example .env
 ```
 
 Default configuration:
-- Port: 3000
+- Port: 8081
 - Database: ./data/vsol.db
 - Environment: development
 
@@ -62,10 +62,10 @@ npm run dev
 ```
 
 This will:
-- Start the Fastify server on `http://localhost:8080`
-- Start the Vite dev server on `http://localhost:5173` (proxies API requests to :8080)
+- Start the Fastify server on `http://localhost:8081`
+- Start the Vite dev server on `http://localhost:8080` (proxies API requests to :8081)
 
-Open your browser to `http://localhost:5173` to see the site.
+Open your browser to `http://localhost:8080` to see the site.
 
 ### 4. Build for Production
 
@@ -85,7 +85,7 @@ This creates:
 npm start
 ```
 
-Server runs on `http://localhost:8080` (or your configured PORT)
+Server runs on `http://localhost:8081` (or your configured PORT)
 
 ## Available Scripts
 
@@ -201,7 +201,7 @@ The referral landing page allows recipients of outreach emails to submit referra
 
 3. **Access the Page:**
    
-   Navigate to `http://localhost:8080/referral.html` in development or `https://vsol.software/referral` in production.
+   Navigate to `http://localhost:8081/referral.html` in development or `https://vsol.software/referral` in production.
 
 ### Features
 
