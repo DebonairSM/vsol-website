@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'client/index.html'),
         agentic: path.resolve(__dirname, 'client/agentic.html'),
+        talkflow: path.resolve(__dirname, 'client/talkflow.html'),
         spreadsheet: path.resolve(__dirname, 'client/spreadsheet-automation.html'),
         secretLeads: path.resolve(__dirname, 'client/secret-leads-viewer.html'),
         referral: path.resolve(__dirname, 'client/referral.html'),

@@ -8,19 +8,36 @@
     "title": "The Future of Software Development",
     "content": "Agentic Software Development represents a fundamental shift in how software is built. By leveraging AI agents for routine tasks, code generation, and testing while maintaining human oversight for architecture, strategy, and critical decisions, we achieve unprecedented speed and quality. This approach allows us to deliver enterprise-grade solutions at a fraction of traditional costs and timelines."
   },
-  "featuredProduct": {
-    "badge": "NEW OFFERING",
-    "title": "Work Automation Platform",
-    "description": "We turn manual workflows—spreadsheets, task lists, calendars, and planners—into intelligent automated systems. In a single discovery session, we analyze your processes and generate live mockups, then deliver a working prototype within hours. Every engagement comes complete with workflow documentation, ROI analysis, and deployment-ready deliverables.",
-    "features": [
-      "AI-generated interactive mockups delivered during discovery calls",
-      "Same-day working demonstrations",
-      "Complete workflow documentation and ROI analysis",
-      "Deployment-ready prototypes"
-    ],
-    "link": "/spreadsheet-automation.html",
-    "buttonText": "Explore Platform"
-  },
+  "featuredProducts": [
+    {
+      "badge": "NOW AVAILABLE",
+      "title": "TalkFlow",
+      "description": "Replace any CRM, ERP, or management system feature with automation that adapts to your process. The system learns how you work instead of forcing you to learn it. Built through natural conversation with Sunny, our AI Systems Analyst.",
+      "features": [
+        "Natural speech-to-text conversation interface",
+        "Instant transformation into user stories",
+        "Working MVP delivered in days, not months",
+        "Systems that adapt to your unique workflow"
+      ],
+      "link": "/talkflow.html",
+      "buttonText": "Experience TalkFlow",
+      "highlight": true
+    },
+    {
+      "badge": "PROVEN SOLUTION",
+      "title": "Work Automation Platform",
+      "description": "Turn manual workflows—spreadsheets, task lists, calendars, and planners—into intelligent automated systems. Built with TalkFlow technology for rapid delivery and perfect customization.",
+      "features": [
+        "AI-generated interactive mockups during discovery calls",
+        "Same-day working demonstrations",
+        "Complete workflow documentation and ROI analysis",
+        "Deployment-ready prototypes"
+      ],
+      "link": "/spreadsheet-automation.html",
+      "buttonText": "Explore Platform",
+      "highlight": false
+    }
+  ],
   "benefits": [
     {
       "title": "Accelerated Delivery",
@@ -71,9 +88,9 @@
         "description": "Automated generation of API documentation, code comments, architecture diagrams, and user guides. AI handles the writing; humans ensure accuracy and clarity."
       },
       {
-        "title": "Work Automation Platform",
-        "description": "We turn manual workflows—spreadsheets, task lists, calendars, and planners—into intelligent automated systems. In a single discovery session, we analyze your processes and generate live mockups, then deliver a working prototype within hours. Every engagement comes complete with workflow documentation, ROI analysis, and deployment-ready deliverables.",
-        "link": "/spreadsheet-automation.html"
+        "title": "TalkFlow - Custom System Builder",
+        "description": "Replace any CRM, ERP, or management system with automation built through natural conversation. TalkFlow learns your process and builds systems that adapt to you—from spreadsheet replacements to complete work automation platforms. Speech-to-text to working MVP in days.",
+        "link": "/talkflow.html"
       }
     ]
   },

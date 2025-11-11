@@ -1,26 +1,43 @@
 {
   "hero": {
-    "title": "Agentic AI",
+    "title": "Agentic Software Development",
     "subtitle": "AI-Driven Development with Human Oversight",
     "description": "We combine advanced AI agents with expert human guidance to deliver software faster, smarter, and more efficiently. Every project is orchestrated by Rommel, our Agent Master, ensuring quality and precision in every line of code."
   },
   "introduction": {
     "title": "The Future of Software Development",
-    "content": "Agentic AI represents a fundamental shift in how software is built. By leveraging AI agents for routine tasks, code generation, and testing while maintaining human oversight for architecture, strategy, and critical decisions, we achieve unprecedented speed and quality. This approach allows us to deliver enterprise-grade solutions at a fraction of traditional costs and timelines."
+    "content": "Agentic Software Development represents a fundamental shift in how software is built. By leveraging AI agents for routine tasks, code generation, and testing while maintaining human oversight for architecture, strategy, and critical decisions, we achieve unprecedented speed and quality. This approach allows us to deliver enterprise-grade solutions at a fraction of traditional costs and timelines."
   },
-  "featuredProduct": {
-    "badge": "NEW OFFERING",
-    "title": "Work Automation Platform",
-    "description": "We turn manual workflows—spreadsheets, task lists, calendars, and planners—into intelligent automated systems. In a single discovery session, we analyze your processes and generate live mockups, then deliver a working prototype within hours. Every engagement comes complete with workflow documentation, ROI analysis, and deployment-ready deliverables.",
-    "features": [
-      "AI-generated interactive mockups delivered during discovery calls",
-      "Same-day working demonstrations",
-      "Complete workflow documentation and ROI analysis",
-      "Deployment-ready prototypes"
-    ],
-    "link": "/spreadsheet-automation.html",
-    "buttonText": "Explore Platform"
-  },
+  "featuredProducts": [
+    {
+      "badge": "NOW AVAILABLE",
+      "title": "TalkFlow",
+      "description": "Replace any CRM, ERP, or management system feature with automation that adapts to your process. The system learns how you work instead of forcing you to learn it. Built through natural conversation with Sunny, our AI Systems Analyst.",
+      "features": [
+        "Natural speech-to-text conversation interface",
+        "Instant transformation into user stories",
+        "Working MVP delivered in days, not months",
+        "Systems that adapt to your unique workflow"
+      ],
+      "link": "/talkflow.html",
+      "buttonText": "Experience TalkFlow",
+      "highlight": true
+    },
+    {
+      "badge": "PROVEN SOLUTION",
+      "title": "Work Automation Platform",
+      "description": "Turn manual workflows—spreadsheets, task lists, calendars, and planners—into intelligent automated systems. Built with TalkFlow technology for rapid delivery and perfect customization.",
+      "features": [
+        "AI-generated interactive mockups during discovery calls",
+        "Same-day working demonstrations",
+        "Complete workflow documentation and ROI analysis",
+        "Deployment-ready prototypes"
+      ],
+      "link": "/spreadsheet-automation.html",
+      "buttonText": "Explore Platform",
+      "highlight": false
+    }
+  ],
   "benefits": [
     {
       "title": "Accelerated Delivery",
@@ -41,11 +58,6 @@
       "title": "Human Expertise",
       "description": "Every decision that matters is made by experienced developers. AI handles the mechanics; humans handle the strategy, architecture, and innovation.",
       "icon": "expertise"
-    },
-    {
-      "title": "Modern Cloud Architecture",
-      "description": "We leverage Render for lightning-fast deployments and real CI/CD pipelines. Built entirely on open-source technologies like top-shelf Node.js and Linux, we pile on the savings while delivering enterprise-grade performance. All these proven, cost-effective technologies mean lower costs for you.",
-      "icon": "cloud"
     }
   ],
   "services": {
@@ -56,36 +68,29 @@
         "description": "Full-stack web applications built with AI assistance for frontend, backend, and database layers. We use AI agents for component generation, API development, and automated testing while maintaining human oversight for architecture and user experience design."
       },
       {
-        "title": "Work Automation Platform",
-        "description": "We turn manual workflows—spreadsheets, task lists, calendars, and planners—into intelligent automated systems. In a single discovery session, we analyze your processes and generate live mockups, then deliver a working prototype within hours. Every engagement comes complete with workflow documentation, ROI analysis, and deployment-ready deliverables.",
-        "link": "/spreadsheet-automation.html"
-      },
-      {
         "title": "Legacy System Modernization",
         "description": "Transform outdated systems into modern, maintainable codebases. AI agents analyze legacy code, generate documentation, and assist in refactoring while human experts guide the modernization strategy and ensure business logic integrity."
       },
       {
-        "title": "API Development & Testing Suite",
-        "description": "End-to-end API development with AI-generated endpoints, comprehensive test suites, and automated documentation. Human experts design the architecture and ensure security, scalability, and quality."
+        "title": "Automated Testing & Quality Assurance",
+        "description": "Comprehensive test suite generation and maintenance using AI. We create unit tests, integration tests, and end-to-end tests automatically, with human validation of test coverage and critical paths."
+      },
+      {
+        "title": "API Development & Integration",
+        "description": "Rapid API development with AI-generated endpoints, documentation, and client SDKs. Human experts design the API architecture and ensure security, scalability, and proper error handling."
       },
       {
         "title": "Code Review & Optimization",
-        "description": "AI-powered code analysis identifies performance bottlenecks, security vulnerabilities, and maintainability issues. Human experts provide strategic recommendations, implement optimizations, and conduct penetration testing to validate security posture. Comprehensive assessments include static code analysis, dynamic security testing, and vulnerability scanning."
+        "description": "AI-powered code analysis identifies performance bottlenecks, security vulnerabilities, and maintainability issues. Human experts provide strategic recommendations and implement optimizations."
       },
       {
-        "title": "Local LLM Integration",
-        "description": "Set up and integrate local Large Language Models like Llama and Mistral into your applications. We handle installation, configuration, and optimization to give you the power of AI while keeping your data private and on-premises. Perfect for organizations with strict data security requirements.",
-        "icons": ["computer", "lock"]
+        "title": "Technical Documentation",
+        "description": "Automated generation of API documentation, code comments, architecture diagrams, and user guides. AI handles the writing; humans ensure accuracy and clarity."
       },
       {
-        "title": "LLM API Integration",
-        "description": "Seamlessly integrate your applications with leading AI providers including ChatGPT, Claude, and Grok. We handle authentication, rate limiting, error handling, and cost optimization to ensure reliable and efficient AI-powered features in your software.",
-        "logos": ["openai", "anthropic", "grok"]
-      },
-      {
-        "title": "Cloud Deployment & CI/CD",
-        "description": "We use Render for lightning-fast deployments and real continuous integration/continuous deployment pipelines. Built on open-source foundations—top-shelf Node.js, Linux, and battle-tested frameworks—our infrastructure is cost-effective, reliable, and scales with your business. Modern cloud architecture with maximum savings.",
-        "icons": ["cloud_upload", "rocket_launch"]
+        "title": "TalkFlow - Custom System Builder",
+        "description": "Replace any CRM, ERP, or management system with automation built through natural conversation. TalkFlow learns your process and builds systems that adapt to you—from spreadsheet replacements to complete work automation platforms. Speech-to-text to working MVP in days.",
+        "link": "/talkflow.html"
       }
     ]
   },
@@ -97,8 +102,7 @@
       "AI Agent Orchestration",
       "Enterprise Architecture",
       "Full-Stack Development",
-      "Cloud Infrastructure (Render, Azure)",
-      "Open-Source Technologies (Node.js, Linux)",
+      "Cloud Infrastructure (Azure, Render)",
       "Agile & Scrum Methodologies",
       "Team Leadership & Mentoring"
     ],
@@ -106,11 +110,8 @@
   },
   "cta": {
     "title": "Ready to Accelerate Your Development?",
-    "description": "Discover how Agentic AI can transform your next project. Get faster delivery, lower costs, and higher quality.",
+    "description": "Discover how Agentic Software Development can transform your next project. Get faster delivery, lower costs, and higher quality.",
     "buttonText": "Start a Conversation",
-    "email": "rommel@vsol.software",
-    "calendlyUrl": "https://calendly.com/vsol/meeting-with-bandeira",
-    "calendlyText": "Book a Meeting with Rommel"
+    "email": "rommel@vsol.software"
   }
 }
-

@@ -28,8 +28,41 @@ async function loadAgenticContent() {
       introContent.innerHTML = `<p>${data.introduction.content}</p>`;
     }
 
-    // Populate featured product section
-    if (data.featuredProduct) {
+    // Populate featured products section
+    if (data.featuredProducts) {
+      const featuredProductsContainer = document.getElementById('featured-products-container');
+      
+      if (featuredProductsContainer) {
+        featuredProductsContainer.innerHTML = data.featuredProducts.map((product: any) => {
+          const highlightClass = product.highlight ? ' highlight' : '';
+          const featuresHtml = product.features.map((feature: string) => `
+            <div class="feature-item">
+              <span class="text-lg">${feature}</span>
+            </div>
+          `).join('');
+          
+          return `
+            <div class="featured-product-card${highlightClass}">
+              <div class="featured-badge">${product.badge}</div>
+              <div class="text-center mb-8">
+                <h2 class="featured-product-title">${product.title}</h2>
+                <div class="accent-bar mx-auto"></div>
+              </div>
+              <div class="featured-product-content">
+                <div class="featured-description">
+                  <p class="text-xl text-gray-700 leading-relaxed mb-6">${product.description}</p>
+                  <div class="feature-list">${featuresHtml}</div>
+                </div>
+                <div class="featured-cta">
+                  <a href="${product.link}" class="btn-featured-primary">${product.buttonText} →</a>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+    } else if (data.featuredProduct) {
+      // Fallback for old single product format
       const featuredBadge = document.getElementById('featured-badge');
       const featuredTitle = document.getElementById('featured-title');
       const featuredDescription = document.getElementById('featured-description');

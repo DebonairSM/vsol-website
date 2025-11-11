@@ -26,6 +26,14 @@
     </image:image>
   </url>
   
+  <!-- TalkFlow Page -->
+  <url>
+    <loc>https://vsol.software/talkflow.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
   <!-- Spreadsheet Automation Page -->
   <url>
     <loc>https://vsol.software/spreadsheet-automation.html</loc>
