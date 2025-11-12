@@ -283,21 +283,73 @@
     50% { opacity: 1; }
   }
 
-  /* Featured Products Grid */
+  /* Featured Products Grid - Column Layout */
   .featured-products-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
   }
 
-  @media (min-width: 768px) {
-    .featured-products-grid {
-      grid-template-columns: repeat(2, 1fr);
+  /* Hero Card for Primary Featured Product */
+  .featured-hero-card {
+    @apply relative bg-white rounded-2xl w-full;
+    padding: 3rem;
+    border: 4px solid transparent;
+    background-image: 
+      linear-gradient(white, white),
+      linear-gradient(135deg, #8b5cf6, #06b6d4);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 100% 100%, 300% 300%;
+    animation: gradient-border 4s ease infinite, hero-glow 3s ease-in-out infinite;
+    box-shadow: 
+      0 25px 80px rgba(139, 92, 246, 0.4),
+      0 15px 50px rgba(6, 182, 212, 0.3),
+      0 0 0 1px rgba(139, 92, 246, 0.2);
+    transition: all 0.4s ease;
+  }
+
+  @keyframes gradient-border {
+    0% { background-position: 0% 50%, 0% 50%; }
+    50% { background-position: 0% 50%, 100% 50%; }
+    100% { background-position: 0% 50%, 0% 50%; }
+  }
+
+  @keyframes hero-glow {
+    0%, 100% { 
+      box-shadow: 
+        0 25px 80px rgba(139, 92, 246, 0.4),
+        0 15px 50px rgba(6, 182, 212, 0.3),
+        0 0 0 1px rgba(139, 92, 246, 0.2);
+    }
+    50% { 
+      box-shadow: 
+        0 30px 90px rgba(139, 92, 246, 0.5),
+        0 20px 60px rgba(6, 182, 212, 0.4),
+        0 0 0 2px rgba(139, 92, 246, 0.3);
     }
   }
 
+  .featured-hero-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+      0 35px 100px rgba(139, 92, 246, 0.5),
+      0 25px 70px rgba(6, 182, 212, 0.4),
+      0 0 0 3px rgba(139, 92, 246, 0.4);
+  }
+
+  @media (min-width: 768px) {
+    .featured-hero-card {
+      padding: 4rem;
+    }
+  }
+
+  /* Standard Card for Secondary Featured Product */
   .featured-product-card {
-    @apply relative bg-white rounded-2xl p-8 md:p-12;
+    @apply relative bg-white rounded-2xl;
+    padding: 2.5rem;
+    max-width: 70%;
     border: 3px solid transparent;
     background-image: 
       linear-gradient(white, white),
@@ -305,33 +357,27 @@
     background-origin: border-box;
     background-clip: padding-box, border-box;
     box-shadow: 
-      0 20px 60px rgba(139, 92, 246, 0.25),
-      0 10px 30px rgba(6, 182, 212, 0.15),
-      0 0 0 1px rgba(139, 92, 246, 0.1);
+      0 15px 40px rgba(139, 92, 246, 0.2),
+      0 8px 20px rgba(6, 182, 212, 0.15);
     transition: all 0.4s ease;
-  }
-  
-  .featured-product-card.highlight {
-    border-width: 4px;
-    box-shadow: 
-      0 25px 70px rgba(139, 92, 246, 0.35),
-      0 15px 40px rgba(6, 182, 212, 0.2),
-      0 0 0 1px rgba(139, 92, 246, 0.2);
-    transform: scale(1.02);
-  }
-
-  @media (min-width: 768px) {
-    .featured-product-card.highlight {
-      transform: scale(1.05);
-    }
   }
 
   .featured-product-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     box-shadow: 
-      0 30px 80px rgba(139, 92, 246, 0.35),
-      0 15px 40px rgba(6, 182, 212, 0.25),
-      0 0 0 2px rgba(139, 92, 246, 0.3);
+      0 20px 50px rgba(139, 92, 246, 0.3),
+      0 12px 30px rgba(6, 182, 212, 0.2);
+  }
+
+  @media (max-width: 767px) {
+    .featured-product-card {
+      max-width: 100%;
+      padding: 2rem;
+    }
+    
+    .featured-hero-card {
+      padding: 2rem;
+    }
   }
 
   .featured-badge {
@@ -354,18 +400,35 @@
   }
 
   .featured-product-title {
-    @apply text-4xl md:text-6xl font-bold text-transparent bg-clip-text mb-6;
+    @apply text-3xl md:text-5xl font-bold text-transparent bg-clip-text mb-6;
     background-image: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
     line-height: 1.2;
     padding-bottom: 0.1em;
   }
 
+  .featured-hero-card .featured-product-title {
+    @apply text-4xl md:text-6xl lg:text-7xl;
+    margin-bottom: 2rem;
+  }
+
   .featured-product-content {
-    @apply flex flex-col lg:flex-row gap-8 items-center;
+    @apply flex flex-col gap-8;
+  }
+
+  .featured-hero-card .featured-product-content {
+    @apply lg:flex-row items-center;
   }
 
   .featured-description {
     @apply flex-1;
+  }
+  
+  .featured-hero-card .featured-description {
+    max-width: none;
+  }
+  
+  .featured-product-card .featured-description {
+    max-width: 100%;
   }
 
   .feature-list {

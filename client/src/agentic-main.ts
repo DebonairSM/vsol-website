@@ -34,7 +34,7 @@ async function loadAgenticContent() {
       
       if (featuredProductsContainer) {
         featuredProductsContainer.innerHTML = data.featuredProducts.map((product: any) => {
-          const highlightClass = product.highlight ? ' highlight' : '';
+          const cardClass = product.highlight ? 'featured-hero-card' : 'featured-product-card';
           const featuresHtml = product.features.map((feature: string) => `
             <div class="feature-item">
               <span class="text-lg">${feature}</span>
@@ -42,7 +42,7 @@ async function loadAgenticContent() {
           `).join('');
           
           return `
-            <div class="featured-product-card${highlightClass}">
+            <div class="${cardClass}">
               <div class="featured-badge">${product.badge}</div>
               <div class="text-center mb-8">
                 <h2 class="featured-product-title">${product.title}</h2>
