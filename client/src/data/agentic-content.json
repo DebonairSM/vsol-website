@@ -11,22 +11,22 @@
   "featuredProducts": [
     {
       "badge": "NOW AVAILABLE",
-      "title": "TalkFlow",
-      "description": "Replace any CRM, ERP, or management system feature with automation that adapts to your process. The system learns how you work instead of forcing you to learn it. Built through natural conversation with Sunny, our AI Systems Analyst.",
+      "title": "Sunny",
+      "description": "VSol's AI Agent that builds systems adapting to your process. Sunny handles everything from systems analysis to development, QA, and DevOps. The system learns how you work instead of forcing you to learn it.",
       "features": [
         "Natural speech-to-text conversation interface",
         "Instant transformation into user stories",
         "Working MVP delivered in days, not months",
         "Systems that adapt to your unique workflow"
       ],
-      "link": "/talkflow.html",
-      "buttonText": "Experience TalkFlow",
+      "link": "/sunny.html",
+      "buttonText": "Experience Sunny",
       "highlight": true
     },
     {
       "badge": "PROVEN SOLUTION",
       "title": "Work Automation Platform",
-      "description": "Turn manual workflows—spreadsheets, task lists, calendars, and planners—into intelligent automated systems. Built with TalkFlow technology for rapid delivery and perfect customization.",
+      "description": "Turn manual workflows—spreadsheets, task lists, calendars, and planners—into intelligent automated systems. Built with Sunny for rapid delivery and perfect customization.",
       "features": [
         "AI-generated interactive mockups during discovery calls",
         "Same-day working demonstrations",
@@ -88,9 +88,9 @@
         "description": "Automated generation of API documentation, code comments, architecture diagrams, and user guides. AI handles the writing; humans ensure accuracy and clarity."
       },
       {
-        "title": "TalkFlow - Custom System Builder",
-        "description": "Replace any CRM, ERP, or management system with automation built through natural conversation. TalkFlow learns your process and builds systems that adapt to you—from spreadsheet replacements to complete work automation platforms. Speech-to-text to working MVP in days.",
-        "link": "/talkflow.html"
+        "title": "Sunny - Custom System Builder",
+        "description": "Replace any CRM, ERP, or management system with automation built through natural conversation. Sunny is VSol's AI Agent who handles analysis, development, QA, and DevOps. From spreadsheet replacements to complete work automation platforms. Speech-to-text to working MVP in days.",
+        "link": "/sunny.html"
       }
     ]
   },

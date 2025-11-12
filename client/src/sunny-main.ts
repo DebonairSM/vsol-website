@@ -1,4 +1,4 @@
-import './styles/talkflow.css';
+import './styles/sunny.css';
 
 // Smooth scroll navigation
 document.addEventListener('DOMContentLoaded', () => {
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             email: formData.get('email') as string,
             company: (formData.get('company') as string) || '',
             description: (formData.get('description') as string) || '',
-            form_type: 'talkflow'
+            form_type: 'sunny'
         };
         
         // Send to backend API
@@ -397,7 +397,7 @@ window.addEventListener('load', () => {
         setTimeout(() => {
             const loadTime = perfData.loadEventEnd - perfData.navigationStart;
             if (loadTime > 0 && loadTime < 60000) { // Valid time between 0 and 60 seconds
-                console.log(`TalkFlow page load time: ${loadTime}ms`);
+                console.log(`Sunny page load time: ${loadTime}ms`);
             }
         }, 0);
     }

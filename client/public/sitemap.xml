@@ -26,10 +26,10 @@
     </image:image>
   </url>
   
-  <!-- TalkFlow Page -->
+  <!-- Sunny Page -->
   <url>
-    <loc>https://vsol.software/talkflow.html</loc>
-    <lastmod>2025-11-11</lastmod>
+    <loc>https://vsol.software/sunny.html</loc>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
