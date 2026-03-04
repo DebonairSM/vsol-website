@@ -1,6 +1,6 @@
 import Fastify, { FastifyInstance } from 'fastify';
 import fastifyStatic from '@fastify/static';
-import { join, dirname } from 'path';
+import { join, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { config } from './config/index.js';
 import { errorHandler } from './middleware/error-handler.js';
@@ -32,10 +32,20 @@ export async function createApp(): Promise<FastifyInstance> {
   // Register security plugins
   await registerSecurityPlugins(app);
 
-  // Serve static files from the built client
-  const publicPath = config.isProduction
-    ? join(__dirname, 'public')
-    : join(__dirname, '../client/public');
+  // Canonical host redirect: apex -> www
+  app.addHook('onRequest', async (request, reply) => {
+    const host = request.headers.host?.split(':')[0]?.toLowerCase();
+    if (host === 'vsol.software') {
+      return reply.redirect(301, `https://www.vsol.software${request.raw.url}`);
+    }
+  });
+
+  // Serve static files: when running from dist/ use built client, else use dev client
+  const runningFromDist = basename(__dirname) === 'dist';
+  const publicPath =
+    config.isProduction || runningFromDist
+      ? join(__dirname, 'public')
+      : join(__dirname, '../client/public');
 
   await app.register(fastifyStatic, {
     root: publicPath,
