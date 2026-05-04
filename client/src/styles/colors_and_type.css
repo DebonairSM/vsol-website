@@ -1,0 +1,248 @@
+/* ============================================================
+   VSol Software Design System — Tokens
+   Source: claude.ai/design export, derived from this codebase.
+   Imported by main.css, agentic.css, sunny.css.
+   Source Sans Pro + Material Icons are loaded via HTML <link>
+   tags in each page (see client/index.html), so this file does
+   not re-import fonts.
+   ============================================================ */
+
+:root {
+  /* ---------- Brand colors ---------- */
+
+  /* Primary — VSol blue. Brand mark uses ~#018bca (primary-600). */
+  --vsol-primary-50:  #e6f7ff;
+  --vsol-primary-100: #bae7ff;
+  --vsol-primary-200: #91d5ff;
+  --vsol-primary-300: #69c0ff;
+  --vsol-primary-400: #40a9ff;
+  --vsol-primary-500: #1890ff;
+  --vsol-primary-600: #018bca;  /* logo cyan-blue */
+  --vsol-primary-700: #096dd9;
+  --vsol-primary-800: #0050b3;
+  --vsol-primary-900: #003a8c;  /* deep blue used in hero overlays / contact gradient */
+
+  /* Accent — VSol yellow ("sparkle" highlight, CTA buttons, nav underline) */
+  --vsol-accent-50:  #fffbe6;
+  --vsol-accent-100: #fff1b8;
+  --vsol-accent-200: #ffe58f;
+  --vsol-accent-300: #ffd666;
+  --vsol-accent-400: #ffc53d;
+  --vsol-accent-500: #FAB909;  /* signature yellow */
+  --vsol-accent-600: #d48806;
+  --vsol-accent-700: #ad6800;
+  --vsol-accent-800: #874d00;
+  --vsol-accent-900: #613400;
+
+  /* Agentic AI sub-brand (agentic.html, sunny.html) */
+  --agentic-violet:        #8b5cf6;
+  --agentic-violet-dark:   #7c3aed;
+  --agentic-purple:        #a855f7;
+  --agentic-cyan:          #06b6d4;
+  --agentic-sunny:         #fbbf24;  /* "Sunny" agent yellow accent */
+  --agentic-sunny-amber:   #f59e0b;
+
+  /* Neutrals (Tailwind slate/gray, used across all pages) */
+  --vsol-text:        #1e293b;  /* slate-800 */
+  --vsol-text-light:  #64748b;  /* slate-500 */
+  --vsol-bg:          #ffffff;
+  --vsol-bg-alt:      #f8fafc;  /* slate-50 */
+  --vsol-bg-soft:     #f1f5f9;  /* slate-100 */
+  --vsol-border:      #e2e8f0;  /* slate-200 */
+  --vsol-gray-600:    #4b5563;
+  --vsol-gray-900:    #111827;
+
+  /* Semantic — used in modal benefit icons */
+  --vsol-success-50:  #d1fae5;
+  --vsol-success-600: #059669;
+  --vsol-info-50:     #dbeafe;
+  --vsol-info-600:    #2563eb;
+  --vsol-warning-50:  #fef3c7;
+  --vsol-warning-600: #d97706;
+
+  /* ---------- Signature gradients ---------- */
+  --grad-agentic:      linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  --grad-agentic-tri:  linear-gradient(135deg, #8b5cf6 0%, #06b6d4 50%, #a855f7 100%);
+  --grad-agentic-soft: linear-gradient(135deg, rgba(139,92,246,0.10), rgba(6,182,212,0.10));
+  --grad-hero-blue:    linear-gradient(135deg, rgba(0,58,140,0.6) 0%, rgba(0,80,179,0.5) 50%, rgba(9,109,217,0.6) 100%);
+  --grad-light-bg:     linear-gradient(135deg, #f8fafc 0%, #e0e7ff 25%, #dbeafe 50%, #e0f2fe 75%, #f0f9ff 100%);
+  --grad-sunny-shimmer:linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #fbbf24 100%);
+  --grad-text-dark:    linear-gradient(135deg, #1e293b 0%, #475569 100%);
+
+  /* ---------- Typography ---------- */
+  --font-sans: 'Source Sans Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-icon: 'Material Icons';
+
+  /* Weights */
+  --fw-extralight: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* Type scale (matches Tailwind defaults used in code) */
+  --text-xs:  0.75rem;   /* 12px */
+  --text-sm:  0.875rem;  /* 14px */
+  --text-base:1rem;      /* 16px */
+  --text-lg:  1.125rem;  /* 18px */
+  --text-xl:  1.25rem;   /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+  --text-5xl: 3rem;      /* 48px */
+  --text-6xl: 3.75rem;   /* 60px */
+  --text-7xl: 4.5rem;    /* 72px */
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.7;
+  --tracking-wide: 0.05em;
+
+  /* ---------- Spacing ---------- */
+  --vsol-space-xs: 0.5rem;
+  --vsol-space-sm: 1rem;
+  --vsol-space-md: 2rem;
+  --vsol-space-lg: 4rem;
+  --vsol-space-xl: 6rem;
+
+  /* ---------- Radii ---------- */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;   /* default buttons */
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;     /* cards, hero glass panel */
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ---------- Shadows ---------- */
+  --vsol-shadow-sm: 0 1px 2px 0 rgba(0,0,0,.05);
+  --vsol-shadow-md: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+  --vsol-shadow-lg: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+  --vsol-shadow-xl: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
+  --vsol-shadow-2xl: 0 25px 50px -12px rgba(0,0,0,.25);
+  --shadow-primary: 0 10px 40px rgba(139,92,246,.3);
+  --shadow-sunny:   0 10px 30px rgba(251,191,36,.3);
+  --shadow-glass:   0 8px 32px rgba(139,92,246,.15), 0 4px 20px rgba(6,182,212,.1);
+
+  /* ---------- Motion ---------- */
+  --ease-out:  cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast:    0.2s var(--ease-out);
+  --t-normal:  0.3s var(--ease-out);
+  --t-slow:    0.5s var(--ease-out);
+
+  /* ---------- Layout ---------- */
+  --container-max: 1280px;
+}
+
+/* ============================================================
+   Semantic / element-level tokens
+   These are opt-in classes — apply them where you want the
+   tokenized look without writing custom CSS. They do NOT
+   override base body / heading styles set by Tailwind or the
+   page-level stylesheets.
+   ============================================================ */
+
+.ds-body {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--vsol-text);
+  background: var(--vsol-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display / hero — used on home hero "UNLEASH THE VALUE" */
+.ds-display {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: clamp(2rem, 5vw, var(--text-7xl));
+  line-height: var(--leading-tight);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.ds-h1 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: clamp(2rem, 4vw, var(--text-6xl));
+  line-height: var(--leading-tight);
+  text-transform: uppercase;
+}
+
+.ds-h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: clamp(1.75rem, 3.5vw, var(--text-5xl));
+  line-height: var(--leading-snug);
+  text-transform: uppercase;
+}
+
+.ds-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+}
+
+.ds-h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+}
+
+/* Eyebrow / nav-link — uppercase, tracked */
+.ds-eyebrow {
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--vsol-primary-600);
+}
+
+.ds-p {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--vsol-text);
+}
+.ds-lead {
+  font-size: var(--text-xl);
+  line-height: var(--leading-relaxed);
+  color: var(--vsol-text-light);
+}
+.ds-small {
+  font-size: var(--text-sm);
+  color: var(--vsol-text-light);
+}
+
+/* Gradient text utilities */
+.ds-text-agentic {
+  background: var(--grad-agentic);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.ds-text-dark-grad {
+  background: var(--grad-text-dark);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Accent bar — used above section headers on agentic page */
+.ds-accent-bar {
+  width: 80px;
+  height: 4px;
+  background: var(--grad-agentic);
+  border-radius: 2px;
+}
+.ds-accent-bar-yellow {
+  width: 8px;
+  background: var(--vsol-accent-500);
+  align-self: stretch;
+}
