@@ -1,118 +1,80 @@
 {
   "hero": {
-    "title": "Agentic Software Development",
-    "subtitle": "AI-Driven Development with Human Oversight",
-    "description": "We combine advanced AI agents with expert human guidance to deliver software faster, smarter, and more efficiently. Every project is orchestrated by Rommel, our Agent Master, ensuring quality and precision in every line of code."
+    "title": "Sunny CoWork",
+    "subtitle": "AI Coworking Powered by Codex or Claude",
+    "description": "Work with VSol and Sunny to turn conversations into working software. Codex or Claude helps generate, test, and document the build while VSol keeps the product practical, secure, and ready to use."
   },
   "introduction": {
-    "title": "The Future of Software Development",
-    "content": "Agentic Software Development represents a fundamental shift in how software is built. By leveraging AI agents for routine tasks, code generation, and testing while maintaining human oversight for architecture, strategy, and critical decisions, we achieve unprecedented speed and quality. This approach allows us to deliver enterprise-grade solutions at a fraction of traditional costs and timelines."
+    "title": "Build With AI, Guided by VSol",
+    "content": "Sunny CoWork is VSol's agentic product for designing and building software side by side with AI. Bring a workflow, idea, or messy spreadsheet; we shape it into requirements, prototype it quickly, and guide it toward production."
   },
   "featuredProducts": [
     {
-      "badge": "NOW AVAILABLE",
-      "title": "Sunny",
-      "description": "VSol's AI Agent that builds systems adapting to your process. Sunny handles everything from systems analysis to development, QA, and DevOps. The system learns how you work instead of forcing you to learn it.",
+      "badge": "NEW PRODUCT",
+      "title": "Sunny CoWork",
+      "description": "A guided AI coworking experience for teams that want custom software without a long discovery cycle.",
       "features": [
-        "Natural speech-to-text conversation interface",
-        "Instant transformation into user stories",
-        "Working MVP delivered in days, not months",
-        "Systems that adapt to your unique workflow"
+        "Natural conversation to user stories",
+        "Codex or Claude-assisted development",
+        "Fast prototypes and working MVPs",
+        "VSol oversight from architecture to launch"
       ],
       "link": "/sunny.html",
-      "buttonText": "Experience Sunny",
+      "buttonText": "Explore Sunny CoWork",
       "highlight": true
-    },
-    {
-      "badge": "PROVEN SOLUTION",
-      "title": "Work Automation Platform",
-      "description": "Turn manual workflows—spreadsheets, task lists, calendars, and planners—into intelligent automated systems. Built with Sunny for rapid delivery and perfect customization.",
-      "features": [
-        "AI-generated interactive mockups during discovery calls",
-        "Same-day working demonstrations",
-        "Complete workflow documentation and ROI analysis",
-        "Deployment-ready prototypes"
-      ],
-      "link": "/spreadsheet-automation.html",
-      "buttonText": "Explore Platform",
-      "highlight": false
     }
   ],
   "benefits": [
     {
-      "title": "Accelerated Delivery",
-      "description": "AI agents handle repetitive coding tasks, automated testing, and documentation generation, allowing us to deliver projects 3-5x faster than traditional development approaches.",
+      "title": "Move Faster",
+      "description": "Go from idea to prototype in days, then keep refining with real feedback.",
       "icon": "speed"
     },
     {
-      "title": "Cost Efficiency",
-      "description": "By automating routine development work, we reduce project costs by up to 70% while maintaining high code quality and comprehensive test coverage.",
-      "icon": "cost"
-    },
-    {
-      "title": "Consistent Quality",
-      "description": "AI agents apply best practices uniformly across all code, ensuring consistent style, thorough documentation, and comprehensive error handling throughout your project.",
-      "icon": "quality"
-    },
-    {
-      "title": "Human Expertise",
-      "description": "Every decision that matters is made by experienced developers. AI handles the mechanics; humans handle the strategy, architecture, and innovation.",
+      "title": "Stay in Control",
+      "description": "AI accelerates the work; VSol guides the architecture, quality, and delivery decisions.",
       "icon": "expertise"
+    },
+    {
+      "title": "Fit Your Workflow",
+      "description": "Build around how your team already works instead of forcing another rigid system into place.",
+      "icon": "quality"
     }
   ],
   "services": {
-    "title": "Our Services",
+    "title": "What Sunny CoWork Can Build",
     "items": [
       {
-        "title": "AI-Accelerated Web Applications",
-        "description": "Full-stack web applications built with AI assistance for frontend, backend, and database layers. We use AI agents for component generation, API development, and automated testing while maintaining human oversight for architecture and user experience design."
+        "title": "Custom Internal Tools",
+        "description": "Dashboards, portals, approvals, trackers, and admin tools shaped around your process."
       },
       {
-        "title": "Legacy System Modernization",
-        "description": "Transform outdated systems into modern, maintainable codebases. AI agents analyze legacy code, generate documentation, and assist in refactoring while human experts guide the modernization strategy and ensure business logic integrity."
+        "title": "Workflow Automation",
+        "description": "Replace manual spreadsheets, task lists, and handoffs with focused software."
       },
       {
-        "title": "Automated Testing & Quality Assurance",
-        "description": "Comprehensive test suite generation and maintenance using AI. We create unit tests, integration tests, and end-to-end tests automatically, with human validation of test coverage and critical paths."
-      },
-      {
-        "title": "API Development & Integration",
-        "description": "Rapid API development with AI-generated endpoints, documentation, and client SDKs. Human experts design the API architecture and ensure security, scalability, and proper error handling."
-      },
-      {
-        "title": "Code Review & Optimization",
-        "description": "AI-powered code analysis identifies performance bottlenecks, security vulnerabilities, and maintainability issues. Human experts provide strategic recommendations and implement optimizations."
-      },
-      {
-        "title": "Technical Documentation",
-        "description": "Automated generation of API documentation, code comments, architecture diagrams, and user guides. AI handles the writing; humans ensure accuracy and clarity."
-      },
-      {
-        "title": "Sunny - Custom System Builder",
-        "description": "Replace any CRM, ERP, or management system with automation built through natural conversation. Sunny is VSol's AI Agent who handles analysis, development, QA, and DevOps. From spreadsheet replacements to complete work automation platforms. Speech-to-text to working MVP in days.",
-        "link": "/sunny.html"
+        "title": "AI-Assisted MVPs",
+        "description": "Prototype and validate new software ideas with Codex or Claude, then harden what works."
       }
     ]
   },
   "agentMaster": {
     "name": "Rommel",
-    "title": "Agent Master",
-    "bio": "Rommel founded VSol Software and has spent over 15 years architecting enterprise software solutions for global clients. As Agent Master, he orchestrates AI agents to handle development tasks while maintaining strategic oversight of every project. His expertise spans full-stack development, cloud architecture, and agile methodologies, ensuring that AI acceleration never comes at the cost of quality or maintainability.",
+    "title": "Sunny CoWork Lead",
+    "bio": "Rommel leads the Sunny CoWork process, pairing VSol's software experience with Codex or Claude-assisted delivery.",
     "expertise": [
-      "AI Agent Orchestration",
+      "AI Coworking",
+      "Codex and Claude-Assisted Delivery",
       "Enterprise Architecture",
       "Full-Stack Development",
-      "Cloud Infrastructure (Azure, Render)",
-      "Agile & Scrum Methodologies",
-      "Team Leadership & Mentoring"
+      "Agile Delivery"
     ],
-    "quote": "AI agents are remarkable tools, but software development is still fundamentally a human endeavor. My role is to ensure that we harness AI's speed and consistency while applying human judgment where it matters most."
+    "quote": "Sunny CoWork is simple: people bring the business context, AI accelerates the build, and VSol keeps the result useful."
   },
   "cta": {
-    "title": "Ready to Accelerate Your Development?",
-    "description": "Discover how Agentic Software Development can transform your next project. Get faster delivery, lower costs, and higher quality.",
+    "title": "Try Sunny CoWork",
+    "description": "Bring us a workflow or product idea. We will help you turn it into working software with Codex or Claude.",
     "buttonText": "Start a Conversation",
     "email": "rommel@vsol.software"
   }
 }
-
