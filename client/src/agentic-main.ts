@@ -163,7 +163,7 @@ async function loadAgenticContent() {
       }).join('');
     }
 
-    // Populate Agent Master profile section
+    // Populate Sunny CoWork lead profile section
     const profileName = document.getElementById('profile-name');
     const profileTitle = document.getElementById('profile-title');
     const profileBio = document.getElementById('profile-bio');
